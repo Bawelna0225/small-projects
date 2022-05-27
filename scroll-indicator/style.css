@@ -1,0 +1,59 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  color: white;
+}
+
+.progress-container {
+  width: 100%;
+  height: 12px;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.progress-container .progress-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20%;
+  height: 100%;
+  background-color: orange;
+}
+
+.section {
+  width: 100%;
+  height: 100vh;
+  background-color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 5rem;
+  z-index: 1;
+}
+.section-1 {
+  background-color: #050505;
+}
+.section-2 {
+  background-color: #111;
+}
+.section-3 {
+  background-color: #131313;
+}
+.section-4 {
+  background-color: #161616;
+}
+.section-5 {
+  background-color: #191919;
+}
+
+.progress-num {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  font-size: 15rem;
+  opacity: 0.1;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}/*# sourceMappingURL=style.css.map */
