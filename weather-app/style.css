@@ -35,13 +35,6 @@ body {
 }
 
 .evening {
-  --text-color: rgb(255, 255, 255);
-  --background-color: rgb(66, 51, 102);
-  --container-color: rgba(177, 85, 242, 0.373);
-  --box-color: rgba(11, 11, 11, 0.222);
-}
-
-.night {
   --text-color: #ddd;
   --background-color: rgb(0, 15, 38);
   --container-color: rgba(54, 56, 85, 0.373);
@@ -68,6 +61,7 @@ body {
 }
 .snackbar.error {
   color: red;
+  background-color: rgba(250, 0, 0, 0.1);
 }
 
 .container {
@@ -134,6 +128,7 @@ body {
 .container .weather-box .weather {
   font-size: 2rem;
   text-transform: capitalize;
+  text-align: center;
 }
 .container .weather-box .location {
   display: flex;

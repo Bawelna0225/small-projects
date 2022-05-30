@@ -27,7 +27,7 @@ const fetchData = () => {
 		.then((res) => res.json())
 		.then((result) => weatherDetails(result))
 		.catch(() => {
-			console.log('Something is not yes')
+			console.log('error')
 		})
 }
 
@@ -76,13 +76,10 @@ function dateBuilder() {
 	} else if (now.getHours() >= 12 && now.getHours() < 17) {
 		welcomeText.innerText = 'Good Afternoon'
 		document.body.classList.add('afternoon')
-	} else if (now.getHours() >= 17 && now.getHours() < 21) {
+	} else {
 		welcomeText.innerText = 'Good Evening'
 		document.body.classList.add('evening')
-	} else {
-		welcomeText.innerText = 'Good Night'
-		document.body.classList.add('night')
-	}
+	} 
 
 	dateBox.innerText = `${day} ${date} ${month} ${year}`
 }

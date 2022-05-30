@@ -30,12 +30,6 @@ body {
 	--box-color: rgba(58, 58, 58, 0.172);
 }
 .evening {
-	--text-color: rgb(255, 255, 255);
-	--background-color: rgb(66, 51, 102);
-	--container-color: rgba(177, 85, 242, 0.373);
-	--box-color: rgba(11, 11, 11, 0.222);
-}
-.night {
 	--text-color: #ddd;
 	--background-color: rgb(0, 15, 38);
 	--container-color: rgba(54, 56, 85, 0.373);
@@ -60,6 +54,7 @@ body {
 	}
 	&.error {
 		color: red;
+		background-color: rgba(250, 0, 0, 0.1);
 	}
 }
 .container {
@@ -118,6 +113,7 @@ body {
 		.weather {
 			font-size: 2rem;
 			text-transform: capitalize;
+			text-align: center;
 		}
 		.location {
 			display: flex;
