@@ -18,7 +18,7 @@ cityInput.addEventListener('keyup', (e) => {
 })
 
 const requestApi = (city) => {
-	api = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=e0b05db76303becf6844083c5f2c7d40`
+	api = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=api_key`
 	fetchData()
 }
 
