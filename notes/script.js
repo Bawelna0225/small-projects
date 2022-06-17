@@ -26,7 +26,7 @@ closeIcon.addEventListener("click", () => {
     document.querySelector("body").style.overflow = "auto";
 });
 
-function showNotes() {
+const showNotes = () => {
     if(!notes) return;
     document.querySelectorAll(".note").forEach(li => li.remove());
     notes.forEach((note, id) => {
@@ -52,7 +52,7 @@ function showNotes() {
 }
 showNotes();
 
-function showMenu(elem) {
+const showMenu = (elem) => {
     elem.parentElement.classList.add("show");
     document.addEventListener("click", e => {
         if(e.target.tagName != "I" || e.target != elem) {
@@ -61,7 +61,7 @@ function showMenu(elem) {
     });
 }
 
-function deleteNote(noteId) {
+const deleteNote = (noteId) => {
     let confirmDel = confirm("Are you sure you want to delete this note?");
     if(!confirmDel) return;
     notes.splice(noteId, 1);
@@ -69,7 +69,7 @@ function deleteNote(noteId) {
     showNotes();
 }
 
-function updateNote(noteId, title, filterDesc) {
+const updateNote = (noteId, title, filterDesc) => {
     let description = filterDesc.replaceAll('<br/>', '\r\n');
     updateId = noteId;
     isUpdate = true;
