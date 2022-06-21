@@ -1,32 +1,32 @@
 const swiper = new Swiper('.swiper', {
-  speed: 400,
-  slidesPerView: 1,
-  loop: true,
+  // Optional parameters
+  direction: 'horizontal',
+  loop: true,        
+  centeredSlides: true,
+  slidesPerView: 'auto',
+  effect: "coverflow",
+  coverflowEffect: {
+    rotate: 0,
+    stretch: 0,
+    depth: 250,
+    modifier: 1,
+    slideShadows: true
+  },
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+    dynamicBullets: true,
+  },
+
+  // Navigation arrows
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
-    pagination: {
-    el: '.swiper-pagination',
-    type: 'bullets',
-  },
-  breakpoints: {
-    '@0.50': {
-      slidesPerView: 1,
-      spaceBetween: 50,
-    },
-    '@1.00': {
-      slidesPerView: 2,
-      spaceBetween: 50,
-    },
-        '@1.25': {
-      slidesPerView: 3,
-      spaceBetween: 50,
-    },
-    '@1.50': {
-      slidesPerView: 4,
-      spaceBetween: 50,
-    },
-  }
+
+
+  // And if we need scrollbar
+  // scrollbar: {
+  //   el: '.swiper-scrollbar',
+  // },
 });
-// Now you can use all slider methods like
