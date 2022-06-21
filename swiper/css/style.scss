@@ -1,57 +1,55 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
-*{
-  padding: 0;
-  margin: 0;
-  font-family: 'Poppins', sans-serif;
-
+* {
+	padding: 0;
+	margin: 0;
+	font-family: 'Poppins', sans-serif;
 }
-:root{
-  --swiper-theme-color: orange !important;
+:root {
+	--swiper-theme-color: orange !important;
 }
-body{
-  background-color: #252525;
-  overflow: hidden;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+body {
+	background-color: #252525;
+	overflow: hidden;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .swiper {
-  width: min(100% - 1rem, 1200px);
-  text-align: center;
+	width: min(100% - 1rem, 1200px);
+	text-align: center;
 }
 
-.swiper-slide{
-  background-color: #111;
-  color: white;
-  width: 350px !important;
-  height: 500px !important;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-  border-radius: 5px !important;
-  transition: .5s linear;
+.swiper-slide {
+	background-color: #111;
+	color: white;
+	width: 350px !important;
+	height: 500px !important;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+	border-radius: 5px !important;
+	transition: 0.5s linear;
 }
-.swiper-slide-visible{
- border-radius: 12px !important;
+.swiper-slide-visible {
+	border-radius: 12px !important;
 }
-.swiper-slide-active{
- // border: 1px solid orange; 
-  background-color: #000;
+.swiper-slide-active {
+	background-color: #000;
 }
-.swiper-pagination{
-   bottom: 10px !important;
-  .swiper-pagination-bullet{
-  background-color: white !important;
-  }
-    .swiper-pagination-bullet-active{
-  background-color: orange !important;
-  }
+.swiper-pagination {
+	bottom: 10px !important;
+	.swiper-pagination-bullet {
+		background-color: white !important;
+	}
+	.swiper-pagination-bullet-active {
+		background-color: orange !important;
+	}
 }
 
-.swiper-button-prev, .swiper-button-next{
-//   color: #fff;
+.swiper-button-prev,
+.swiper-button-next {
 }
