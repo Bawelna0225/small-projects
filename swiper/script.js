@@ -24,3 +24,9 @@ const swiper = new Swiper('.swiper', {
     prevEl: '.swiper-button-prev',
   },
 });
+
+const themeToggleBtn = document.querySelector('.theme-toggle-btn')
+
+themeToggleBtn.onclick = () => {
+  document.body.classList.toggle('light-mode')
+}
