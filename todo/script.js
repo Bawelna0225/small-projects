@@ -15,7 +15,7 @@ filters.forEach(btn => {
     });
 });
 
-function showTodo(filter) {
+const showTodo = (filter) => {
     let liTag = "";
     if(todos) {
         todos.forEach((todo, id) => {
@@ -44,7 +44,7 @@ function showTodo(filter) {
 }
 showTodo("all");
 
-function showMenu(selectedTask) {
+const showMenu = (selectedTask) => {
     let menuDiv = selectedTask.parentElement.lastElementChild;
     menuDiv.classList.add("show");
     document.addEventListener("click", e => {
@@ -54,7 +54,7 @@ function showMenu(selectedTask) {
     });
 }
 
-function updateStatus(selectedTask) {
+const updateStatus = (selectedTask) => {
     let taskName = selectedTask.parentElement.lastElementChild;
     if(selectedTask.checked) {
         taskName.classList.add("checked");
@@ -66,7 +66,7 @@ function updateStatus(selectedTask) {
     localStorage.setItem("todo-list", JSON.stringify(todos))
 }
 
-function editTask(taskId, textName) {
+const editTask = (taskId, textName) => {
     editId = taskId;
     isEditTask = true;
     taskInput.value = textName;
@@ -74,7 +74,7 @@ function editTask(taskId, textName) {
     taskInput.classList.add("active");
 }
 
-function deleteTask(deleteId, filter) {
+const deleteTask = (deleteId, filter) => {
     isEditTask = false;
     todos.splice(deleteId, 1);
     localStorage.setItem("todo-list", JSON.stringify(todos));
