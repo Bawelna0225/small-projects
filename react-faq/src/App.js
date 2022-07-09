@@ -1,23 +1,46 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import FAQ from './FAQ';
 
-function App() {
+function App () {
+  const [faqs, setfaqs] = useState([
+    {
+      question: 'How to make FAQ in React?',
+      answer: 'This Way',
+      open: true
+    },
+    {
+      question: 'Why did I make this simple project?',
+      answer: 'To make daily push to git',
+      open: false
+    },
+    {
+      question: 'What Questions Should be in FAQ?',
+      answer: 'No Idea.',
+      open: false
+    }
+  ]);
+
+  const toggleFAQ = index => {
+    setfaqs(faqs.map((faq, i) => {
+      if (i === index) {
+        faq.open = !faq.open
+      } else {
+        faq.open = false;
+      }
+
+      return faq;
+    }))
+  }
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="bg-text">FAQ</div>
+      <div className="faqs">
+        {faqs.map((faq, i) => (
+          <FAQ faq={faq} index={i} toggleFAQ={toggleFAQ} />
+        ))}
+      </div>
     </div>
   );
 }
