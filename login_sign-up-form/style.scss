@@ -1,0 +1,231 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,100,200,300);
+/* GENERAL RESETS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
+}
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(180deg, rgb(27, 34, 44) 0%, rgb(63, 101, 161)100%);
+  transition: 0.5s;
+  &.active{
+    background: linear-gradient(180deg, rgb(44, 27, 27) 0%, rgb(141, 42, 42)100%);
+  }
+}
+.container{
+  position: relative;
+  width: 800px;
+  height: 500px;
+  margin: 20px;
+  .boxBg{
+    position: absolute;
+    top: 40px;
+    width: 100%;
+    height: 420px;        
+    display: flex;
+    border-radius: 20px;
+    //background-color:rgba(0, 0, 0, 0.5);
+    background-size: cover;
+    box-shadow: 0 5px 45px rgba(0, 0, 0, 0.13);
+    .box{
+      position: relative;
+      width: 50%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      h2{
+        color: #fff;
+        font-size: 1.2em;
+        font-weight: 50;
+        margin-bottom: 10px;
+      }
+      button{
+        cursor: pointer;
+        padding: 10px 20px;
+        background: rgb(231, 231, 231);
+        color: #333;
+        border-radius: 5px;
+        font-size: 16px;
+        font-weight: 500;
+        border: none;
+      } 
+    }
+  }
+  .formBx{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: #fff;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 5px 45px rgba(0, 0, 0, 0.349);
+    border-radius: 15px;
+    transition: 0.5s ease-in-out;
+    overflow: hidden;
+    background-color: rgba(27, 27, 27, 0.815);
+    &.active{
+      left: 50%;
+      .signinform{
+        left: -100%;
+        transition-delay: 0s;
+      }
+      .signupform{
+        left: 0;
+        transition-delay: 0.25s;
+        input{
+          transition: all 0.3s ease-in-out;
+          &[type="submit"]{
+            background: rgb(141, 42, 42);
+            border-radius: 5px;
+          }
+          &:focus{
+            border-bottom: 1px solid rgb(141, 42, 42);
+            transition: all 0.3s ease-in-out;
+          }
+        }
+      }
+    }
+    .form{
+      position: absolute;
+      left: 0;
+      width: 100%;
+      padding: 50px;
+      transition: 0.5s;
+      form{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        .input{
+          position: relative;
+          span{
+            display: flex;
+            position: absolute;
+            right: 0;
+            top: 20%;
+            cursor: pointer;
+            &.visible{
+              svg{
+                &.visibility-off{
+                  display: none;
+
+                }
+              }
+            }
+              &.non-visible{
+                svg{
+                  &.visibility{
+                    display: none;
+
+                  }
+                }
+              }
+              svg{
+                pointer-events: none;
+                width: 20px;
+                fill: #fff;
+                path{
+                  pointer-events: none;
+                }
+              }
+            }
+          }
+
+          h3 {
+            font-size: 1.5em;
+            color: rgb(165, 165, 165);
+            margin-bottom: 20px;
+            font-weight: 500;
+          }
+          input{
+            width: 100%;
+            margin-bottom: 20px;
+            padding: 10px;
+            outline: none;
+            font-size: 16px;
+            background: transparent;
+            color: rgb(165, 165, 165);
+            border: none;
+            border-bottom: 1px solid #333;
+            transition: all 0.3s ease-in-out;
+            &[type="submit"]{
+              background: #03a9f4;
+              border: none;
+              color: #fff;
+              max-width: 100px;
+              cursor: pointer;
+              border-radius: 5px;
+            }
+            &:focus{
+              border-bottom: 1px solid #03a9f4;
+              transition: all 0.3s ease-in-out;
+            }
+          }
+          .forgot{
+            color: rgb(146, 146, 146);
+          }
+        }
+      }
+      .signinform{
+        transition-delay: 0.25s;
+        input{
+          &[type="submit"]{
+            background: rgb(141, 42, 42);
+          }
+          &:focus{
+            border-bottom: 1px solid rgbrgb(141, 42, 42);
+          }
+        }
+      }
+      .signupform{
+        left: 100%;
+        transition-delay: 0s;
+      }
+    }
+  }    
+  @media (max-width:991px) {
+    .container{
+      max-width: 400px;
+      height: 650px;
+      display: flex;
+      justify-content: center;
+      align-items: center;    
+      .boxBg{
+        top: 0;
+        height: 100%; 
+        .box{
+          position: absolute;
+          width: 100%;
+          height: 150px;
+          bottom: 0;
+          &.signin{
+            top: 0;
+          }
+        }
+      }
+      .formBx{
+        width: 100%;
+        height: 500px;
+        top: 0;
+        box-shadow: none;
+        &.active{
+          left: 0;
+          top: 150px;
+        }
+      }
+    }        
+
+  }
+  #boxsgin{
+    opacity: 0;
+  }

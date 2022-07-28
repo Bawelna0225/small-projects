@@ -1,0 +1,219 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,100,200,300);
+/* GENERAL RESETS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(180deg, rgb(27, 34, 44) 0%, rgb(63, 101, 161) 100%);
+  transition: 0.5s;
+}
+body.active {
+  background: linear-gradient(180deg, rgb(44, 27, 27) 0%, rgb(141, 42, 42) 100%);
+}
+
+.container {
+  position: relative;
+  width: 800px;
+  height: 500px;
+  margin: 20px;
+}
+.container .boxBg {
+  position: absolute;
+  top: 40px;
+  width: 100%;
+  height: 420px;
+  display: flex;
+  border-radius: 20px;
+  background-size: cover;
+  box-shadow: 0 5px 45px rgba(0, 0, 0, 0.13);
+}
+.container .boxBg .box {
+  position: relative;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.container .boxBg .box h2 {
+  color: #fff;
+  font-size: 1.2em;
+  font-weight: 50;
+  margin-bottom: 10px;
+}
+.container .boxBg .box button {
+  cursor: pointer;
+  padding: 10px 20px;
+  background: rgb(231, 231, 231);
+  color: #333;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+}
+.container .formBx {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: #fff;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 5px 45px rgba(0, 0, 0, 0.349);
+  border-radius: 15px;
+  transition: 0.5s ease-in-out;
+  overflow: hidden;
+  background-color: rgba(27, 27, 27, 0.815);
+}
+.container .formBx.active {
+  left: 50%;
+}
+.container .formBx.active .signinform {
+  left: -100%;
+  transition-delay: 0s;
+}
+.container .formBx.active .signupform {
+  left: 0;
+  transition-delay: 0.25s;
+}
+.container .formBx.active .signupform input {
+  transition: all 0.3s ease-in-out;
+}
+.container .formBx.active .signupform input[type=submit] {
+  background: rgb(141, 42, 42);
+  border-radius: 5px;
+}
+.container .formBx.active .signupform input:focus {
+  border-bottom: 1px solid rgb(141, 42, 42);
+  transition: all 0.3s ease-in-out;
+}
+.container .formBx .form {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  padding: 50px;
+  transition: 0.5s;
+}
+.container .formBx .form form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.container .formBx .form form .input {
+  position: relative;
+}
+.container .formBx .form form .input span {
+  display: flex;
+  position: absolute;
+  right: 0;
+  top: 20%;
+  cursor: pointer;
+}
+.container .formBx .form form .input span.visible svg.visibility-off {
+  display: none;
+}
+.container .formBx .form form .input span.non-visible svg.visibility {
+  display: none;
+}
+.container .formBx .form form .input span svg {
+  pointer-events: none;
+  width: 20px;
+  fill: #fff;
+}
+.container .formBx .form form .input span svg path {
+  pointer-events: none;
+}
+.container .formBx .form form h3 {
+  font-size: 1.5em;
+  color: rgb(165, 165, 165);
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+.container .formBx .form form input {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 10px;
+  outline: none;
+  font-size: 16px;
+  background: transparent;
+  color: rgb(165, 165, 165);
+  border: none;
+  border-bottom: 1px solid #333;
+  transition: all 0.3s ease-in-out;
+}
+.container .formBx .form form input[type=submit] {
+  background: #03a9f4;
+  border: none;
+  color: #fff;
+  max-width: 100px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.container .formBx .form form input:focus {
+  border-bottom: 1px solid #03a9f4;
+  transition: all 0.3s ease-in-out;
+}
+.container .formBx .form form .forgot {
+  color: rgb(146, 146, 146);
+}
+.container .formBx .signinform {
+  transition-delay: 0.25s;
+}
+.container .formBx .signinform input[type=submit] {
+  background: rgb(141, 42, 42);
+}
+.container .formBx .signinform input:focus {
+  border-bottom: 1px solid rgbrgb(141, 42, 42);
+}
+.container .formBx .signupform {
+  left: 100%;
+  transition-delay: 0s;
+}
+
+@media (max-width: 991px) {
+  .container {
+    max-width: 400px;
+    height: 650px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .container .boxBg {
+    top: 0;
+    height: 100%;
+  }
+  .container .boxBg .box {
+    position: absolute;
+    width: 100%;
+    height: 150px;
+    bottom: 0;
+  }
+  .container .boxBg .box.signin {
+    top: 0;
+  }
+  .container .formBx {
+    width: 100%;
+    height: 500px;
+    top: 0;
+    box-shadow: none;
+  }
+  .container .formBx.active {
+    left: 0;
+    top: 150px;
+  }
+}
+#boxsgin {
+  opacity: 0;
+}/*# sourceMappingURL=style.css.map */

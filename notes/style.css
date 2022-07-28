@@ -285,11 +285,9 @@ form :where(input, textarea):focus {
     gap: 15px;
     grid-template-columns: repeat(auto-fill, 100%);
   }
-
   .popup-box .popup {
     max-width: calc(100% - 15px);
   }
-
   .bottom-content .settings i {
     font-size: 17px;
   }
