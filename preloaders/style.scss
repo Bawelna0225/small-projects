@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800&display=swap');
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+:root {
+	--loader-color: #fff;
+}
+body {
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 2vw;
+	padding: 50px;
+	background-color: rgb(30, 32, 34);
+	flex-wrap: wrap;
+}
+button {
+	padding: 10px 20px;
+	background-color: rgba(52, 52, 52, 0.47);
+	border: 1px solid white;
+	color: rgb(222, 222, 222);
+	font-size: 1.1rem;
+	&:hover {
+		cursor: pointer;
+		background-color: rgba(52, 52, 52, 0.695);
+		color: rgb(234, 234, 234);
+	}
+	&:active {
+		background-color: rgb(52, 52, 52);
+		color: #fff;
+	}
+}
+@for $i from 1 through 5 {
+	.preloader-#{$i} {
+		opacity: 0;
+		position: fixed;
+		width: 100%;
+		height: 100vh;
+		pointer-events: none;
+		background-color: rgb(35, 35, 44);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		&.active {
+			opacity: 1;
+			pointer-events: all;
+		}
+	}
+}
+
+.preloader-1 {
+	background-color: rgb(35, 35, 44);
+	pointer-events: none;
+	.loader-outer,
+	.loader-inner {
+		user-select: none;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		aspect-ratio: 1;
+		border-radius: 50%;
+		border: 4px solid var(--loader-color);
+		filter: drop-shadow(0px 0px 10px var(--loader-color));
+		border-bottom: 0;
+	}
+	.loader-inner {
+		width: min(22vw, 8rem);
+		border-left-color: transparent;
+		animation: rotate-right 1s cubic-bezier(0.42, 0.61, 0.58, 0.41) infinite;
+	}
+	.loader-outer {
+		width: min(30vw, 10rem);
+		border-right-color: transparent;
+		animation: rotate-left 1s cubic-bezier(0.42, 0.61, 0.58, 0.41) infinite;
+	}
+	&.active {
+		.loader-outer,
+		.loader-inner {
+			opacity: 1;
+		}
+	}
+}
+
+.preloader-2 {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: rgb(36, 36, 36);
+	.loader3 {
+		display: block;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		aspect-ratio: 1;
+		width: min(22vw, 8rem);
+		border-radius: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+	.loader3:before,
+	.loader3:after {
+		content: '';
+		border: 3px solid var(--loader-color);
+		border-radius: 50%;
+		aspect-ratio: 1;
+		width: min(22vw, 8rem);
+		position: absolute;
+		left: 0px;
+	}
+
+	.loader3:before {
+		transform: scale(1, 1);
+		opacity: 1;
+		animation: beforeWave 1s infinite linear;
+	}
+
+	.loader3:after {
+		transform: scale(0, 0);
+		opacity: 0;
+		animation: afterWave 1s infinite linear;
+	}
+}
+.preloader-3 {
+	.loader1 {
+		border: 8px solid #969595;
+		border-top: 8px solid var(--loader-color);
+		border-radius: 50%;
+		width: min(22vw, 5rem);
+		aspect-ratio: 1;
+		position: absolute;
+		top: 45%;
+		left: 45%;
+		animation: spin 0.9s cubic-bezier(0.42, 0.61, 0.58, 0.41) infinite;
+	}
+}
+.preloader-4 {
+	.loader1 {
+		border: 10px solid var(--loader-color);
+		border-top-color: rgb(31, 31, 126);
+		border-bottom-color: rgb(31, 31, 126);
+		border-radius: 50%;
+		width: min(22vw, 6rem);
+		aspect-ratio: 1;
+		position: absolute;
+		top: 45%;
+		left: 45%;
+		animation: spin 0.5s linear infinite;
+	}
+}
+// Preloader 1 Animation
+@keyframes rotate-left {
+	0% {
+		transform: translate(-50%, -50%) rotate(0deg);
+	}
+	100% {
+		transform: translate(-50%, -50%) rotate(-360deg);
+	}
+}
+@keyframes rotate-right {
+	0% {
+		transform: translate(-50%, -50%) rotate(0deg);
+	}
+	100% {
+		transform: translate(-50%, -50%) rotate(360deg);
+	}
+}
+// Preloader 2 Animation
+@keyframes afterWave {
+	0% {
+		transform: scale(0.5, 0.5);
+		transform: scale(0.5, 0.5);
+		opacity: 0;
+	}
+	100% {
+		transform: scale(1, 1);
+		transform: scale(1, 1);
+		opacity: 1;
+	}
+}
+@keyframes beforeWave {
+	0% {
+		transform: scale(1, 1);
+		opacity: 1;
+	}
+	100% {
+		transform: scale(1.5, 1.5);
+		opacity: 0;
+	}
+}
+// Preloader 3 & 4 Animation
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+// Preloader 5 Animation
