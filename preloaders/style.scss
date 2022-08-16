@@ -13,7 +13,8 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	gap: 2vw;
+	align-content: center;
+	gap: 20px;
 	padding: 50px;
 	background-color: rgb(30, 32, 34);
 	flex-wrap: wrap;
@@ -90,7 +91,6 @@ button {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background-color: rgb(36, 36, 36);
 	.loader3 {
 		display: block;
 		position: absolute;
@@ -100,6 +100,7 @@ button {
 		width: min(22vw, 8rem);
 		border-radius: 50%;
 		transform: translate(-50%, -50%);
+		filter: drop-shadow(0px 0px 10px var(--loader-color));
 	}
 
 	.loader3:before,
@@ -133,23 +134,49 @@ button {
 		width: min(22vw, 5rem);
 		aspect-ratio: 1;
 		position: absolute;
-		top: 45%;
-		left: 45%;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
 		animation: spin 0.9s cubic-bezier(0.42, 0.61, 0.58, 0.41) infinite;
 	}
 }
 .preloader-4 {
 	.loader1 {
-		border: 10px solid var(--loader-color);
-		border-top-color: rgb(31, 31, 126);
-		border-bottom-color: rgb(31, 31, 126);
+		border: 8px solid var(--loader-color);
+		filter: drop-shadow(0px 0px 10px var(--loader-color));
+		border-top-color: transparent;
+		border-bottom-color: transparent;
 		border-radius: 50%;
 		width: min(22vw, 6rem);
 		aspect-ratio: 1;
 		position: absolute;
-		top: 45%;
-		left: 45%;
-		animation: spin 0.5s linear infinite;
+		top: 50%;
+		left: 50%;
+		animation: spin 0.8s linear infinite;
+	}
+}
+.preloader-5 {
+	.loader {
+		position: relative;
+		width: 80px;
+		aspect-ratio: 1;
+		.square-1,
+		.square-2 {
+			position: absolute;
+			width: 20px;
+			aspect-ratio: 1;
+			background-color: #fff;
+		}
+		.square-1 {
+			top: 0;
+			left: 0;
+			animation: move-around-1 1.5s ease-out infinite;
+		}
+		.square-2 {
+			bottom: 0;
+			right: 0;
+			animation: move-around-2 1.5s linear infinite;
+		}
 	}
 }
 // Preloader 1 Animation
@@ -195,10 +222,44 @@ button {
 // Preloader 3 & 4 Animation
 @keyframes spin {
 	0% {
-		transform: rotate(0deg);
+		transform: translate(-50%, -50%) rotate(0deg);
 	}
 	100% {
-		transform: rotate(360deg);
+		transform: translate(-50%, -50%) rotate(360deg);
 	}
 }
 // Preloader 5 Animation
+@keyframes move-around-1 {
+	0% {
+		transform: translate(0%, 0%) scale(1) rotate(0deg);
+	}
+	25% {
+		transform: translate(300%, 0%) scale(0.7) rotate(180deg);
+	}
+	50% {
+		transform: translate(300%, 300%) scale(0.5) rotate(360deg);
+	}
+	75% {
+		transform: translate(0%, 300%) scale(0.7) rotate(180deg);
+	}
+	100% {
+		transform: translate(0%, 0%) scale(1) rotate(0deg);
+	}
+}
+@keyframes move-around-2 {
+	0% {
+		transform: translate(0%, 0%) scale(1) rotate(0deg);
+	}
+	25% {
+		transform: translate(-300%, 0%) scale(0.7) rotate(-180deg);
+	}
+	50% {
+		transform: translate(-300%, -300%) scale(0.5) rotate(-360deg);
+	}
+	75% {
+		transform: translate(0%, -300%) scale(0.7) rotate(-180deg);
+	}
+	100% {
+		transform: translate(0%, 0%) scale(1) rotate(0deg);
+	}
+}
