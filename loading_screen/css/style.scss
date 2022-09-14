@@ -4,6 +4,11 @@
 	box-sizing: border-box;
 	font-family: sans-serif;
 }
+body {
+	background-color: rgb(26, 24, 38);
+	color: white
+}
+@import './navbar';
 .page-loader {
 	z-index: 10;
 	position: fixed;
@@ -16,6 +21,7 @@
 	transition: 300ms linear;
 	&.loaded {
 		opacity: 0 !important;
+		pointer-events: none;
 	}
 	.loading-text {
 		position: absolute;
@@ -38,13 +44,13 @@
 		width: min(100vw - 2rem, 900px);
 		font-size: clamp(1rem, 1.25vw, 2rem);
 		border: 1px solid rgba(255, 255, 255, 0.65);
-		border: 1px solid rgb(10, 179, 10);
+		// border: 1px solid rgb(10, 179, 10);
 		padding: 50px 10px;
 		border-radius: 4px;
 		text-align: center;
 		display: flex;
 		flex-direction: column;
-		box-shadow: 0px 0px 10px green;
+		// box-shadow: 0px 0px 10px green;
 		span {
 			font-size: clamp(1.25rem, 1.75vw, 2.5rem);
 			color: rgb(10, 179, 10);
@@ -62,4 +68,7 @@
 	100% {
 		opacity: 1;
 	}
+}
+main {
+	padding-top: 120px;
 }
