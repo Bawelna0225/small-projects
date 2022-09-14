@@ -8,6 +8,9 @@ body {
 	background-color: rgb(26, 24, 38);
 	color: white
 }
+:root {
+	--accent-color: rgb(18, 170, 225);
+}
 @import './navbar';
 .page-loader {
 	z-index: 10;

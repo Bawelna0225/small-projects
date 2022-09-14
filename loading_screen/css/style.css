@@ -10,11 +10,15 @@ body {
   color: white;
 }
 
+:root {
+  --accent-color: rgb(18, 170, 225);
+}
+
 header {
   position: fixed;
   width: 100vw;
   height: 80px;
-  background-color: rgba(11, 11, 16, 0.943);
+  background-color: rgba(12, 12, 29, 0.943);
   display: flex;
   justify-content: flex-end;
   padding-inline: 20px;
@@ -47,22 +51,20 @@ header nav ul li a::before {
   scale: 0 0;
   transform-origin: top center;
   height: 2px;
-  background-color: rgb(30, 171, 27);
+  background-color: var(--accent-color);
   position: absolute;
   top: 0px;
   transition: all 0.5s;
 }
 header nav ul li a:hover {
   outline: none;
-  color: rgb(30, 171, 27);
-  text-shadow: 0px 0px 10px rgb(30, 171, 27);
+  color: var(--accent-color);
+  text-shadow: 0px 0px 10px var(--accent-color);
 }
 header nav ul li a:hover::before {
   width: 100%;
   scale: 1 1;
-  background-color: #fff;
-  background-color: rgb(30, 171, 27);
-  filter: drop-shadow(0px 10px 10px rgb(4, 250, 0));
+  filter: drop-shadow(0px 10px 10px var(--accent-color));
 }
 header nav ul li a.themes-btn:after {
   content: "";
@@ -70,7 +72,7 @@ header nav ul li a.themes-btn:after {
   scale: 0 0;
   transform-origin: bottom center;
   height: 2px;
-  background-color: rgb(30, 171, 27);
+  background-color: var(--accent-color);
   position: absolute;
   bottom: 0px;
   transition: all 0.5s;
@@ -78,9 +80,7 @@ header nav ul li a.themes-btn:after {
 header nav ul li a.themes-btn:hover::after {
   width: 100%;
   scale: 1 1;
-  background-color: #fff;
-  background-color: rgb(30, 171, 27);
-  filter: drop-shadow(0px -10px 10px rgb(4, 250, 0));
+  filter: drop-shadow(0px -10px 10px var(--accent-color));
 }
 
 .page-loader {
