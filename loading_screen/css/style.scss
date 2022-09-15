@@ -5,11 +5,18 @@
 	font-family: sans-serif;
 }
 body {
-	background-color: rgb(26, 24, 38);
+	background-color: var(--primary-color);
 	color: white
 }
 :root {
+	--navbar-color: rgba(12, 12, 29, 0.943);
+	--primary-color: rgb(26, 24, 38);
 	--accent-color: rgb(18, 170, 225);
+}
+:root {
+	// --navbar-color: rgba(36, 22, 7, 0.943);
+	// --primary-color: rgb(71, 29, 10);
+	// --accent-color: rgb(148, 76, 22);
 }
 @import './navbar';
 .page-loader {

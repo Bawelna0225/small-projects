@@ -1,0 +1,26 @@
+[
+	{
+		"name": "Mid-Night",
+		"id": "midnight",
+		"navbarColor": "",
+		"primaryColor": "",
+		"textColor": "",
+		"accent-color": ""
+	},
+	{
+		"name": "Coffee",
+		"id": "coffee",
+		"navbarColor": "",
+		"primaryColor": "",
+		"textColor": "",
+		"accent-color": ""
+	},
+	{
+		"name": "Neon",
+		"id": "neon",
+		"navbarColor": "",
+		"primaryColor": "",
+		"textColor": "",
+		"accent-color": ""
+	}
+]

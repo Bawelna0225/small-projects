@@ -6,11 +6,13 @@
 }
 
 body {
-  background-color: rgb(26, 24, 38);
+  background-color: var(--primary-color);
   color: white;
 }
 
 :root {
+  --navbar-color: rgba(12, 12, 29, 0.943);
+  --primary-color: rgb(26, 24, 38);
   --accent-color: rgb(18, 170, 225);
 }
 
@@ -18,7 +20,7 @@ header {
   position: fixed;
   width: 100vw;
   height: 80px;
-  background-color: rgba(12, 12, 29, 0.943);
+  background-color: var(--navbar-color);
   display: flex;
   justify-content: flex-end;
   padding-inline: 20px;
