@@ -2,12 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: sans-serif;
-}
-
-body {
-  background-color: var(--primary-color);
-  color: white;
+  font-family: "Poppins", sans-serif;
 }
 
 :root {
@@ -19,6 +14,23 @@ body {
   --color2: #0a0c29;
   --color3: #040425;
   --color4: #090a34;
+}
+
+:root {
+  --navbar-color: #ffffffe0;
+  --primary-color: #ffffff;
+  --accent-color: rgb(18, 170, 225);
+  --shadow-color: rgb(3, 7, 40);
+  --text-color: #000;
+  --color1: #040622;
+  --color2: #0a0c29;
+  --color3: #040425;
+  --color4: #090a34;
+}
+
+body {
+  background-color: var(--primary-color);
+  color: var(--text-color);
 }
 
 header {
@@ -47,7 +59,7 @@ header nav ul li a {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white;
+  color: var(--text-color);
   width: 100%;
   height: 100%;
   position: relative;
@@ -164,27 +176,20 @@ header nav ul li a.themes-btn:hover::after {
 }
 main {
   padding-top: 120px;
-  display: grid;
-  grid-template-columns: 500px 500px;
-  gap: 20px;
-  place-content: center;
 }
-main div {
-  aspect-ratio: 1/1;
+
+.home {
+  width: min(100vw - 2rem, 1500px);
+  height: 80vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  justify-content: center;
 }
-main div:first-of-type {
-  background-color: var(--color1);
-  box-shadow: 0px 0px 10px var(--shadow-color);
+.home h1 {
+  font-size: clamp(2rem, 3vw, 4rem);
 }
-main div:nth-of-type(2) {
-  background-color: var(--color2);
-  box-shadow: 0px 0px 10px var(--shadow-color);
-}
-main div:nth-of-type(3) {
-  background-color: var(--color3);
-  box-shadow: 0px 0px 10px var(--shadow-color);
-}
-main div:nth-of-type(4) {
-  background-color: var(--color4);
-  box-shadow: 0px 0px 10px var(--shadow-color);
+.home h2 {
+  font-size: clamp(1.2rem, 1.5vw, 2rem);
 }/*# sourceMappingURL=style.css.map */

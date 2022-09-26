@@ -2,12 +2,9 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	font-family: sans-serif;
+	font-family: "Poppins", sans-serif;
 }
-body {
-	background-color: var(--primary-color);
-	color: white;
-}
+
 :root {
 	--navbar-color: #090b20e0;
 	--primary-color: #04051a;
@@ -48,6 +45,21 @@ body {
 // 	--color3: #740404;
 // 	--color4: #8A0303;
 // }
+:root {
+	--navbar-color: #ffffffe0;
+	--primary-color: #ffffff;
+	--accent-color: rgb(18, 170, 225);
+	--shadow-color: rgb(3, 7, 40);
+	--text-color: #000;
+	--color1: #040622;
+	--color2: #0a0c29;
+	--color3: #040425;
+	--color4: #090a34;
+}
+body {
+	background-color: var(--primary-color);
+	color: var(--text-color);
+}
 @import './navbar';
 .page-loader {
 	z-index: 10;
@@ -111,28 +123,29 @@ body {
 }
 main {
 	padding-top: 120px;
-	display: grid;
-	grid-template-columns: 500px 500px;
-	gap: 20px;
-	place-content: center;
-	div {
-		// border: 1px solid red;
-		aspect-ratio: 1 / 1;
-		&:first-of-type {
-			background-color: var(--color1);
-			box-shadow: 0px 0px 10px var(--shadow-color);
-		}
-		&:nth-of-type(2) {
-			background-color: var(--color2);
-			box-shadow: 0px 0px 10px var(--shadow-color);
-		}
-		&:nth-of-type(3) {
-			background-color: var(--color3);
-			box-shadow: 0px 0px 10px var(--shadow-color);
-		}
-		&:nth-of-type(4) {
-			background-color: var(--color4);
-			box-shadow: 0px 0px 10px var(--shadow-color);
-		}
-	}
+	// display: grid;
+	// grid-template-columns: 500px 500px;
+	// gap: 20px;
+	// place-content: center;
+	// div {
+	// 	// border: 1px solid red;
+	// 	aspect-ratio: 1 / 1;
+	// 	&:first-of-type {
+	// 		background-color: var(--color1);
+	// 		box-shadow: 0px 0px 10px var(--shadow-color);
+	// 	}
+	// 	&:nth-of-type(2) {
+	// 		background-color: var(--color2);
+	// 		box-shadow: 0px 0px 10px var(--shadow-color);
+	// 	}
+	// 	&:nth-of-type(3) {
+	// 		background-color: var(--color3);
+	// 		box-shadow: 0px 0px 10px var(--shadow-color);
+	// 	}
+	// 	&:nth-of-type(4) {
+	// 		background-color: var(--color4);
+	// 		box-shadow: 0px 0px 10px var(--shadow-color);
+	// 	}
+	// }
 }
+@import './home';
