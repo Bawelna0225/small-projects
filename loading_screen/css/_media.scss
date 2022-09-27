@@ -1,0 +1,14 @@
+@media (max-width: 420px) {
+	.home {
+        text-align: center;
+        .social {
+            justify-content: center;
+        }
+		.buttons {
+			flex-direction: column;
+			button {
+				width: 100%;
+			}
+		}
+	}
+}
