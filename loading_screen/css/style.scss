@@ -1,25 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	font-family: "Poppins", sans-serif;
+	font-family: 'Poppins', sans-serif;
 }
 
-:root {
-	--navbar-color: #090b20e0;
-	--primary-color: #04051a;
-	--accent-color: rgb(18, 170, 225);
-	--shadow-color: rgb(3, 7, 40);
-	--color1: #040622;
-	--color2: #0a0c29;
-	--color3: #040425;
-	--color4: #090a34;
-}
 // :root {
-// 	--navbar-color: rgba(43, 28, 12, 0.943);
-// 	--primary-color: rgb(79, 42, 25);
+// 	--navbar-color: #090b20e0;
+// 	--primary-color: #04051a;
+// 	--accent-color: rgb(18, 170, 225);
+// 	--accent-color2: rgb(12, 67, 87);
+// 	--text-color: rgb(249, 249, 249);
+// 	--shadow-color: rgb(3, 7, 40);
+// 	--color1: #040622;
+// 	--color2: #0a0c29;
+// 	--color3: #040425;
+// 	--color4: #090a34;
+
+// }
+// :root {
+// 	--navbar-color: rgba(172, 120, 65, 0.943);
+// 	--primary-color: rgb(221, 212, 208);
 // 	--accent-color: rgb(148, 76, 22);
 // 	--shadow-color: rgb(40, 13, 3);
+// 	--accent-color2: rgb(67, 27, 13);
+// 	--text-color: rgb(61, 61, 61);
 // 	--color1: #532b16;
 // 	--color2: #5e3019;
 // 	--color3: #5f331d;
@@ -29,6 +36,7 @@
 // 	--navbar-color: #320808;
 // 	--primary-color: #1C0909;
 // 	--accent-color: rgb(225, 39, 18);
+// 	--accent-color2: rgb(87, 28, 12);
 // 	--shadow-color: rgb(40, 3, 3);
 // 	--color1: #480707;
 // 	--color2: #5E0505;
@@ -39,6 +47,7 @@
 // 	--navbar-color: #320808;
 // 	--primary-color: #1C0909;
 // 	--accent-color: rgb(225, 39, 18);
+// 	--accent-color2: rgb(87, 22, 12);
 // 	--shadow-color: rgb(40, 3, 3);
 // 	--color1: #480707;
 // 	--color2: #5E0505;
@@ -49,6 +58,7 @@
 	--navbar-color: #ffffffe0;
 	--primary-color: #ffffff;
 	--accent-color: rgb(18, 170, 225);
+	--accent-color2: rgb(12, 67, 87);
 	--shadow-color: rgb(3, 7, 40);
 	--text-color: #000;
 	--color1: #040622;
@@ -60,6 +70,8 @@ body {
 	background-color: var(--primary-color);
 	color: var(--text-color);
 }
+
+
 @import './navbar';
 .page-loader {
 	z-index: 10;
