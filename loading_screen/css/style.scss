@@ -7,21 +7,134 @@
 	font-family: 'Poppins', sans-serif;
 }
 
+:root {
+	--navbar-color: #000000e0;
+	--primary-color: #000000;
+	--accent-color: rgb(18, 170, 225);
+	--accent-color2: rgb(12, 67, 87);
+	--text-color: rgb(249, 249, 249);
+	--shadow-color: rgb(3, 7, 40);
+	--color1: #040622;
+	--color2: #0a0c29;
+	--color3: #040425;
+	--color4: #090a34;
+
+}
+// dark orange
 // :root {
-// 	--navbar-color: #090b20e0;
-// 	--primary-color: #04051a;
-// 	--accent-color: rgb(18, 170, 225);
-// 	--accent-color2: rgb(12, 67, 87);
+// 	--navbar-color: #040510e0;
+// 	--primary-color: #040510;
+// 	--accent-color: rgb(225, 111, 18);
+// 	--accent-color2: rgb(114, 49, 14);
 // 	--text-color: rgb(249, 249, 249);
 // 	--shadow-color: rgb(3, 7, 40);
 // 	--color1: #040622;
 // 	--color2: #0a0c29;
 // 	--color3: #040425;
 // 	--color4: #090a34;
-
 // }
+
+// // dark green
 // :root {
-// 	--navbar-color: rgba(172, 120, 65, 0.943);
+// 	--navbar-color: #040510e0;
+// 	--primary-color: #040510;
+// 	--accent-color: rgb(90, 225, 18);
+// 	--accent-color2: rgb(14, 114, 39);
+// 	--text-color: rgb(249, 249, 249);
+// 	--shadow-color: rgb(3, 7, 40);
+// 	--color1: #040622;
+// 	--color2: #0a0c29;
+// 	--color3: #040425;
+// 	--color4: #090a34;
+// }
+
+// // dark red
+// :root {
+// 	--navbar-color: rgba(16, 4, 4, 0);
+// 	--primary-color: #050101;
+// 	--accent-color: rgb(225, 18, 18);
+// 	--accent-color2: rgb(114, 14, 14);
+// 	--text-color: rgb(249, 249, 249);
+// 	--shadow-color: rgb(3, 7, 40);
+// 	--color1: #040622;
+// 	--color2: #0a0c29;
+// 	--color3: #040425;
+// 	--color4: #090a34;
+// }
+
+// // dark orange
+// :root {
+// 	--navbar-color: rgba(16, 4, 4, 0);
+// 	--primary-color: #000000;
+// 	--accent-color: rgb(225, 70, 18);
+// 	--accent-color2: rgb(114, 19, 14);
+// 	--text-color: rgb(249, 249, 249);
+// 	--shadow-color: rgb(3, 7, 40);
+// 	--color1: #040622;
+// 	--color2: #0a0c29;
+// 	--color3: #040425;
+// 	--color4: #090a34;
+// }
+
+// // dark purple
+// :root {
+// 	--navbar-color: rgba(19, 19, 19, 0.2);
+// 	--primary-color: #000000;
+// 	--accent-color: rgb(177, 18, 225);
+// 	--accent-color2: rgb(75, 9, 72);
+// 	--text-color: rgb(249, 249, 249);
+// 	--shadow-color: rgb(3, 7, 40);
+// 	--color1: #040622;
+// 	--color2: #0a0c29;
+// 	--color3: #040425;
+// 	--color4: #090a34;
+// }
+
+// // silver
+// :root {
+// 	--navbar-color: rgba(32, 32, 32, 0.2);
+// 	--primary-color: #000000;
+// 	--accent-color: rgb(183, 181, 181);
+// 	--accent-color2: rgb(67, 65, 65);
+// 	--text-color: rgb(249, 249, 249);
+// 	--shadow-color: rgb(211, 211, 211);
+// 	--color1: #040622;
+// 	--color2: #0a0c29;
+// 	--color3: #040425;
+// 	--color4: #090a34;
+// }
+
+// //gold
+// :root {
+// 	--navbar-color: rgba(16, 4, 4, 0);
+// 	--primary-color: #000000;
+// 	--accent-color: rgb(177, 135, 17);
+// 	--accent-color2: rgb(149, 102, 9);
+// 	--text-color: rgb(249, 249, 249);
+// 	--shadow-color: rgb(211, 211, 211);
+// 	--color1: #040622;
+// 	--color2: #0a0c29;
+// 	--color3: #040425;
+// 	--color4: #090a34;
+// }
+
+// // neon
+// :root {
+// 	--navbar-color: rgba(16, 4, 4, 0.2);
+// 	--primary-color: #000000;
+// 	--accent-color: rgb(17, 169, 175);
+// 	--accent-color2: rgb(149, 9, 133);
+// 	--text-color: rgb(249, 249, 249);
+// 	--shadow-color: rgb(211, 211, 211);
+// 	--color1: #040622;
+// 	--color2: #0a0c29;
+// 	--color3: #040425;
+// 	--color4: #090a34;
+// }
+
+// // coffee
+// :root {
+// 	--navbar-color: rgba(218, 148, 74, 0.943);
 // 	--primary-color: rgb(221, 212, 208);
 // 	--accent-color: rgb(148, 76, 22);
 // 	--shadow-color: rgb(40, 13, 3);
@@ -32,28 +145,22 @@
 // 	--color3: #5f331d;
 // 	--color4: #955f37;
 // }
-// :root {
-// 	--navbar-color: #320808;
-// 	--primary-color: #1C0909;
-// 	--accent-color: rgb(225, 39, 18);
-// 	--accent-color2: rgb(87, 28, 12);
-// 	--shadow-color: rgb(40, 3, 3);
-// 	--color1: #480707;
-// 	--color2: #5E0505;
-// 	--color3: #740404;
-// 	--color4: #8A0303;
-// }
+
+// //horror
 // :root {
 // 	--navbar-color: #320808;
 // 	--primary-color: #1C0909;
 // 	--accent-color: rgb(225, 39, 18);
 // 	--accent-color2: rgb(87, 22, 12);
+// 	--text-color: rgb(152, 150, 150);
 // 	--shadow-color: rgb(40, 3, 3);
 // 	--color1: #480707;
 // 	--color2: #5E0505;
 // 	--color3: #740404;
 // 	--color4: #8A0303;
 // }
+
+// // light blue
 :root {
 	--navbar-color: #ffffffe0;
 	--primary-color: #ffffff;
@@ -66,6 +173,119 @@
 	--color3: #040425;
 	--color4: #090a34;
 }
+
+// light orange
+// :root {
+// 	--navbar-color: #ffffffe0;
+// 	--primary-color: #ffffff;
+// 	--accent-color: rgb(255, 115, 0);
+// 	--accent-color2: rgb(179, 78, 6);
+// 	--text-color: #000;
+// 	--shadow-color: rgb(3, 7, 40);
+// 	--color1: #040622;
+// 	--color2: #0a0c29;
+// 	--color3: #040425;
+// 	--color4: #090a34;
+// }
+
+// light green
+// :root {
+// 	--navbar-color: #ffffffe0;
+// 	--primary-color: #fff;
+// 	--accent-color: rgb(90, 225, 18);
+// 	--accent-color2: rgb(14, 114, 39);
+// 	--text-color: #000;
+// 	--shadow-color: rgb(3, 7, 40);
+// 	--color1: #040622;
+// 	--color2: #0a0c29;
+// 	--color3: #040425;
+// 	--color4: #090a34;
+// }
+
+// light red
+// :root {
+// 	--navbar-color: #ffffffe0;
+// 	--primary-color: #ffffff;
+// 	--accent-color: rgb(225, 18, 18);
+// 	--accent-color2: rgb(114, 14, 14);
+// 	--text-color: #000;
+// 	--shadow-color: rgb(3, 7, 40);
+// 	--color1: #040622;
+// 	--color2: #0a0c29;
+// 	--color3: #040425;
+// 	--color4: #090a34;
+// }
+
+// light brown
+// :root {
+// 	--navbar-color: #ffffffe0;
+// 	--primary-color: #ffffff;
+// 	--accent-color: rgb(225, 70, 18);
+// 	--accent-color2: rgb(114, 19, 14);
+// 	--text-color: #000;
+// 	--shadow-color: rgb(3, 7, 40);
+// 	--color1: #040622;
+// 	--color2: #0a0c29;
+// 	--color3: #040425;
+// 	--color4: #090a34;
+// }
+
+// light purple
+// :root {
+// 	--navbar-color: rgba(255, 255, 255, 0);
+// 	--primary-color: #fff;
+// 	--accent-color: rgb(177, 18, 225);
+// 	--accent-color2: rgb(75, 9, 72);
+// 	--text-color: #000;
+// 	--shadow-color: rgb(3, 7, 40);
+// 	--color1: #040622;
+// 	--color2: #0a0c29;
+// 	--color3: #040425;
+// 	--color4: #090a34;
+// }
+
+// //light silver
+// :root {
+// 	--navbar-color: rgba(16, 4, 4, 0);
+// 	--primary-color: #fff;
+// 	--accent-color: rgb(183, 181, 181);
+// 	--accent-color2: rgb(67, 65, 65);
+// 	--text-color: #000;
+// 	--shadow-color: rgb(211, 211, 211);
+// 	--color1: #040622;
+// 	--color2: #0a0c29;
+// 	--color3: #040425;
+// 	--color4: #090a34;
+// }
+
+// //light gold
+// :root {
+// 	--navbar-color: rgba(16, 4, 4, 0);
+// 	--primary-color: #fff;
+// 	--accent-color: rgb(255, 215, 0);
+// 	--accent-color2: rgb(149, 102, 9);
+// 	--text-color: #000;
+// 	--shadow-color: rgb(211, 211, 211);
+// 	--color1: #040622;
+// 	--color2: #0a0c29;
+// 	--color3: #040425;
+// 	--color4: #090a34;
+// }
+
+// //light neon
+// :root {
+// 	--navbar-color: rgba(16, 4, 4, 0);
+// 	--primary-color: #fff;
+// 	--accent-color: rgb(17, 169, 175);
+// 	--accent-color2: rgb(149, 9, 133);
+// 	--text-color: #000;
+// 	--shadow-color: rgb(211, 211, 211);
+// 	--color1: #040622;
+// 	--color2: #0a0c29;
+// 	--color3: #040425;
+// 	--color4: #090a34;
+// }
+
 body {
 	background-color: var(--primary-color);
 	color: var(--text-color);
@@ -160,5 +380,7 @@ main {
 	// 	}
 	// }
 }
+@import './preloader';
 @import './home';
 @import './media';
+@import './animations';

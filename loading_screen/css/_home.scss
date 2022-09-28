@@ -8,6 +8,18 @@
 	padding: 10px;
 	justify-content: center;
 	gap: 35px;
+	overflow: hidden;
+	.bg-text {
+		// position: absolute;
+		font-size: clamp(10rem, 25vw, 25rem);
+		rotate: -45deg;
+		color: var(--accent-color);
+		z-index: -1;
+		opacity: 0.05;
+		top: 200px;
+		left: 50px;
+		overflow: hidden;
+	}
 	&::before {
 		content: '';
 		width: 100%;
@@ -90,6 +102,15 @@
 			svg {
 				width: clamp(30px, 3vw, 40px);
 				fill: var(--text-color);
+				transition: 200ms ease-in-out;
+			}
+			&:hover{
+				svg {
+					fill: var(--accent-color);
+					translate: 0% -10%;
+					scale: 1.1;
+					rotate: 10deg;
+				}
 			}
 		}
 	}
@@ -97,9 +118,10 @@
 		display: flex;
 		gap: 10px;
 		button {
+			color: var(--text-color);
 			padding: 8px 12px;
 			border: none;
-			background-color: var(--primary-color);
+			background-color: var(--primary-color) !important;
 			border-radius: 4px;
 			position: relative;
 			font-size: 1rem;
@@ -114,7 +136,7 @@
 				border-radius: inherit;
 				margin: -2px;
 				background-color: red;
-				z-index: -1;
+				z-index: -50;
 				background: linear-gradient(90deg, var(--accent-color), var(--accent-color2));
 			}
 			&:hover {
