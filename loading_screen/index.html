@@ -8,24 +8,24 @@
 		<meta name="keyword" content="portfolio, javascript, developer, frontend, webdev" />
 		<link rel="stylesheet" href="./css/style.css" />
 		<script src="./index.js" defer></script>
+		<script src="./cursor.js" defer></script>
 		<title>Document</title>
 	</head>
 	<body>
+		<div id="cursor"></div>
+
 		<div class="preloader">
 			<div class="loader-outer"></div>
 			<div class="loader-inner"></div>
 			<div class="fun-fact"></div>
 		</div>
-		<!-- <div class="page-loader">
-        <span class="loading-text">Loading ...</span>
-    </div> -->
 		<header>
 			<a href="#home" class="skip-nav">Skip Navigation</a>
 			<div class="logo">PAWEŁ CZARNECKI</div>
 			<nav>
 				<ul>
 					<li>
-						<a href="#" aria-label="link to home section">
+						<a href="#home" aria-label="link to home section">
 							<span class="text">Home</span>
 							<span class="icon">
 								<svg enable-background="new 0 0 48 48" version="1.1" viewBox="0 0 48 48" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -49,7 +49,7 @@
 						</a>
 					</li>
 					<li>
-						<a href="#" aria-label="link to my work section">
+						<a href="#work" aria-label="link to my work section">
 							<span class="text">My Work</span>
 							<span class="icon">
 								<svg fill="none" stroke="currentColor" stroke-width="0.8" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -59,10 +59,10 @@
 						</a>
 					</li>
 					<li>
-						<a href="#" aria-label="link to my skills section">
+						<a href="#skills" aria-label="link to my skills section">
 							<span class="text">My Skills</span>
 							<span class="icon">
-								<svg  fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.7" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+								<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.7" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
 									<path d="M20 12V5.749a.6.6 0 0 0-.176-.425l-3.148-3.148A.6.6 0 0 0 16.252 2H4.6a.6.6 0 0 0-.6.6v18.8a.6.6 0 0 0 .6.6H11"></path>
 									<path d="M8 14h3m-3-4h8-8Zm0-4h4-4Z"></path>
 									<path fill="currentColor" d="M16 5.4V2.354a.354.354 0 0 1 .604-.25l3.292 3.292a.353.353 0 0 1-.25.604H16.6a.6.6 0 0 1-.6-.6Z"></path>
@@ -74,7 +74,7 @@
 						</a>
 					</li>
 					<li>
-						<a href="#" aria-label="link to about me section">
+						<a href="#about" aria-label="link to about me section">
 							<span class="text">About Me</span>
 							<span class="icon">
 								<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.7" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -85,7 +85,7 @@
 						</a>
 					</li>
 					<li>
-						<a href="#" aria-label="link to contact section">
+						<a href="#contact" aria-label="link to contact section">
 							<span class="text">Contact</span>
 							<span class="icon">
 								<!-- From Iconoir on iconer -->
@@ -97,19 +97,18 @@
 						</a>
 					</li>
 					<li>
-						<a href="#" aria-label="themes" class="themes-btn">
+						<a href="#0" aria-label="themes" class="themes-btn">
 							<span class="text">Themes</span>
 							<span class="icon">
-<svg width="24" height="27" viewBox="0 0 173 191" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<rect x="3" y="3" width="141" height="55" rx="27.5" stroke="black" stroke-width="4" />
-								<rect x="51" y="126" width="39" height="62" rx="15" stroke="black" stroke-width="4" />
-								<line x1="73" y1="122" x2="73" y2="99" stroke-width="4" stroke-linecap="round" />
-								<line x1="158.037" y1="33.0373" x2="169.036" y2="33.1731" stroke-width="4" stroke-linecap="round" />
-								<line x1="169" y1="99" x2="169" y2="34" stroke-width="4" stroke-linecap="round" />
-								<line x1="73" y1="99" x2="168" y2="99" stroke-width="4" stroke-linecap="round" />
-							</svg>
+								<svg width="24" height="27" viewBox="0 0 173 191" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<rect x="3" y="3" width="141" height="55" rx="27.5" stroke="black" stroke-width="4" />
+									<rect x="51" y="126" width="39" height="62" rx="15" stroke="black" stroke-width="4" />
+									<line x1="73" y1="122" x2="73" y2="99" stroke-width="4" stroke-linecap="round" />
+									<line x1="158.037" y1="33.0373" x2="169.036" y2="33.1731" stroke-width="4" stroke-linecap="round" />
+									<line x1="169" y1="99" x2="169" y2="34" stroke-width="4" stroke-linecap="round" />
+									<line x1="73" y1="99" x2="168" y2="99" stroke-width="4" stroke-linecap="round" />
+								</svg>
 							</span>
-							
 						</a>
 					</li>
 				</ul>
@@ -118,6 +117,7 @@
 		<main>
 			<section class="home" id="home">
 				<!-- <div class="bg-text">Home</div> -->
+				<!-- <button class="toggle-active">btn</button> -->
 				<h1>Hi, I am Paweł Czarnecki</h1>
 				<h2>I am <span>Frontend Web Dev</span></h2>
 				<!-- <p>And This is my Personal Portfolio Website</p> -->
@@ -169,6 +169,10 @@
 					<button class="secondary-button">Download My CV</button>
 				</div>
 			</section>
+			<section class="work" id="work"></section>
+			<section class="skills" id="skills"></section>
+			<section class="about" id="about"></section>
+			<section class="contact" id="contact"></section>
 		</main>
 	</body>
 </html>

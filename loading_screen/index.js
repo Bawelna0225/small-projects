@@ -20,5 +20,11 @@ loadingFunFactContainer.innerHTML = loadingFunFacts
 window.addEventListener('load', () => {
 	setTimeout(() => {
 		document.querySelector('.preloader').classList.add('loaded')
+		setTimeout(() => {
+			document.querySelector('#home').classList.add('active')
+		}, 800)
 	}, 3000)
 })
+
+
+console.clear();
