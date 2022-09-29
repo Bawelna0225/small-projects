@@ -9,7 +9,7 @@
 	cursor: none;
 }
 :root {
-  --cursor-size: 28px;
+	--cursor-size: 28px;
 }
 :root {
 	--navbar-color: #000000e0;
@@ -29,7 +29,7 @@
 // 	--navbar-color: #040510e0;
 // 	--primary-color: #040510;
 // 	--accent-color: rgb(225, 111, 18);
-// 	--accent-color2: rgb(114, 49, 14);
+// 	--accent-color2: rgb(145, 77, 13);
 // 	--text-color: rgb(249, 249, 249);
 // 	--shadow-color: rgb(3, 7, 40);
 // 	--color1: #040622;
@@ -112,7 +112,7 @@
 // :root {
 // 	--navbar-color: rgba(16, 4, 4, 0);
 // 	--primary-color: #000000;
-// 	--accent-color: rgb(177, 135, 17);
+// 	--accent-color: rgb(237, 203, 9);
 // 	--accent-color2: rgb(149, 102, 9);
 // 	--text-color: rgb(249, 249, 249);
 // 	--shadow-color: rgb(211, 211, 211);
@@ -196,7 +196,7 @@
 // :root {
 // 	--navbar-color: #ffffffe0;
 // 	--primary-color: #fff;
-// 	--accent-color: rgb(90, 225, 18);
+// 	--accent-color: rgb(65, 157, 16);
 // 	--accent-color2: rgb(14, 114, 39);
 // 	--text-color: #000;
 // 	--shadow-color: rgb(3, 7, 40);
@@ -278,7 +278,7 @@
 
 // //light neon
 // :root {
-// 	--navbar-color: rgba(16, 4, 4, 0);
+// 	--navbar-color: rgba(255, 255, 255, 0.205);
 // 	--primary-color: #fff;
 // 	--accent-color: rgb(17, 169, 175);
 // 	--accent-color2: rgb(149, 9, 133);
@@ -294,7 +294,12 @@ body {
 	background-color: var(--primary-color);
 	color: var(--text-color);
 }
-
+::-webkit-scrollbar {
+	width: 8px;
+}
+::-webkit-scrollbar-thumb {
+	background: var(--accent-color);
+}
 
 @import './navbar';
 // .page-loader {
@@ -394,27 +399,24 @@ main {
 @import './media';
 @import './animations';
 
-
-
 #cursor {
-  position: fixed;
-  top: calc(var(--cursor-size) * -0.5);
-  left:  calc(var(--cursor-size) * -0.5);
-  pointer-events: none;
-  mix-blend-mode: difference;  
-  filter: url(#goo);
-  z-index: 1000;
+	position: fixed;
+	top: calc(var(--cursor-size) * -0.5);
+	left: calc(var(--cursor-size) * -0.5);
+	pointer-events: none;
+	mix-blend-mode: difference;
+	filter: url(#goo);
+	z-index: 1000;
 }
 
 .cursor-circle {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: var(--cursor-size);
-  height: var(--cursor-size);
-  border-radius: var(--cursor-size);
-  background: var(--cursor-color);
-//   box-shadow: 0px 0px 10px var(--accent-color2);
-  transform-origin: center center;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: var(--cursor-size);
+	height: var(--cursor-size);
+	border-radius: var(--cursor-size);
+	background: var(--cursor-color);
+	//   box-shadow: 0px 0px 10px var(--accent-color2);
+	transform-origin: center center;
 }
-

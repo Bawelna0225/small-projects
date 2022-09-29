@@ -26,5 +26,9 @@ window.addEventListener('load', () => {
 	}, 3000)
 })
 
+const themesBtn = document.querySelector('.themes-btn')
+const themesBox = document.querySelector('#dropdown')
 
-console.clear();
+themesBtn.addEventListener('click', (e) => {
+	themesBox.classList.toggle('open')
+})
