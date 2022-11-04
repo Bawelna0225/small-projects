@@ -3,4 +3,103 @@
   padding: 0;
   box-sizing: border-box;
   font-family: monospace;
+}
+
+header {
+  width: 100vw;
+  height: 60px;
+  background-color: rgb(33, 83, 190);
+  display: flex;
+  align-items: center;
+  font-size: 2.3rem;
+  color: white;
+}
+header p {
+  width: min(100% - 2rem, 1000px);
+  margin: 0 auto;
+}
+
+main {
+  width: 100vw;
+  min-height: calc(100vh - 60px);
+}
+main section {
+  width: min(100% - 2rem, 1000px);
+  margin: 0 auto;
+  padding-top: 150px;
+  font-size: 1.5rem;
+  display: grid;
+  place-content: center;
+  gap: 20px;
+}
+main section h1 {
+  font-size: 2.75rem;
+}
+main section p {
+  max-width: 500px;
+}
+main section form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+main section form input,
+main section form select,
+main section form button {
+  max-width: 500px;
+  padding: 12px;
+  font-size: 1.5rem;
+  border-radius: 4px;
+  border: 1px solid black;
+}
+main section form button {
+  background-color: rgb(33, 83, 190);
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+main section form button:hover {
+  background-color: rgb(25, 63, 144);
+}
+main section:nth-child(2) {
+  place-content: center;
+}
+
+#spinner {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 15px solid black;
+  border-bottom-color: rgb(33, 83, 190);
+  -webkit-animation: rotate 1s ease-in-out infinite;
+          animation: rotate 1s ease-in-out infinite;
+  display: none;
+}
+
+#save-link {
+  background-color: rgb(33, 83, 190);
+  color: white;
+  padding: 15px 20px;
+  border-radius: 4px;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+}
+
+@-webkit-keyframes rotate {
+  0% {
+    rotate: 0deg;
+  }
+  100% {
+    rotate: 360deg;
+  }
+}
+
+@keyframes rotate {
+  0% {
+    rotate: 0deg;
+  }
+  100% {
+    rotate: 360deg;
+  }
 }/*# sourceMappingURL=style.css.map */
