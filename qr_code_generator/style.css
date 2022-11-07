@@ -26,7 +26,7 @@ main {
 main section {
   width: min(100% - 2rem, 1000px);
   margin: 0 auto;
-  padding-top: 150px;
+  padding-top: 10vh;
   font-size: 1.5rem;
   display: grid;
   place-content: center;
@@ -63,6 +63,8 @@ main section form button:hover {
 }
 main section:nth-child(2) {
   place-content: center;
+  padding-top: 10vh;
+  padding-bottom: 20px;
 }
 
 #spinner {
