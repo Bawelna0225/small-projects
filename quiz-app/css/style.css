@@ -2,4 +2,57 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+.container {
+  height: 100vh;
+  width: min(100% - 2rem, 1000px);
+  margin: 0 auto;
+  display: grid;
+  place-content: center;
+  gap: 20px;
+  container-type: inline-size;
+}
+.container .answers {
+  display: grid;
+  width: 100cqw;
+  place-content: center;
+  gap: 15px;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+}
+.container .answers .answer {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  box-shadow: 0px 0px 5px rgba(104, 104, 105, 0.119);
+  border-radius: 4px;
+  overflow: hidden;
+}
+.container .answers .answer .prefix {
+  background-color: rgb(0, 102, 255);
+  height: 100%;
+  display: grid;
+  place-content: center;
+  padding: 12px 15px;
+  color: white;
+  font-weight: bold;
+  font-size: 1.2rem;
+  transition: 150ms linear;
+}
+.container .answers .answer .text {
+  padding: 10px;
+}
+.container .answers .answer:hover {
+  cursor: pointer;
+  box-shadow: 0px 0px 5px rgba(104, 104, 105, 0.279);
+}
+.container .answers .answer:hover .prefix {
+  filter: brightness(0.85);
+}
+.container .answers .answer.correct .prefix {
+  background-color: rgb(6, 195, 6);
+}
+.container .answers .answer.wrong .prefix {
+  background-color: rgb(195, 6, 6);
 }/*# sourceMappingURL=style.css.map */
