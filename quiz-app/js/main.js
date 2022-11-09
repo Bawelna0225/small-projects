@@ -6,17 +6,35 @@ const question = document.querySelector('#question'),
 
 let currentQuestion = {}
 let score = 0
+let acceptingAnswers = false;
 let questionNumber = 0
 let availableQuestions = []
 let questions = []
 
-const fetchQuestions = async () => {
-	try {
-		const response = await fetch('../js/questions.json')
-		const json = await response.json()
-        console.log(json);
-	} catch (error) {
-		console.error('error', error)
-	}
-}
-fetchQuestions()
+fetch('../js/questions.json')
+	.then((res) => {
+		return res.json()
+	})
+	.then((loadedQuestions) => {
+        console.log(loadedQuestions);
+		questions = loadedQuestions.map((loadedQuestion) => {
+			const formattedQuestion = {
+				question: loadedQuestion.question,
+			}
+
+			const answerChoices = [...loadedQuestion.incorrect_answers]
+			formattedQuestion.answer = Math.floor(Math.random() * 4) + 1
+			answerChoices.splice(formattedQuestion.answer - 1, 0, loadedQuestion.correct_answer)
+
+			answerChoices.forEach((choice, index) => {
+				formattedQuestion['choice' + (index + 1)] = choice
+			})
+
+			return formattedQuestion
+		})
+
+	})
+	.catch((err) => {
+		console.error(err)
+	})
+

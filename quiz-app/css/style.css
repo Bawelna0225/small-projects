@@ -73,14 +73,14 @@
   display: grid;
   gap: 10px;
 }
-.question-number .progress-bar {
+.question-number .progress-wrapper {
   width: 130px;
   height: 20px;
   border-radius: 8px;
   border: 1px solid black;
   overflow: hidden;
 }
-.question-number .progress-bar .progress {
+.question-number .progress-wrapper .progress-bar {
   width: 50%;
   height: 100%;
   background-color: rgb(0, 102, 255);

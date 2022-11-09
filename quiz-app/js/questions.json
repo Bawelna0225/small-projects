@@ -1,42 +1,27 @@
 [
 	{
-		"question": "Inside which HTML element do we put the JavaScript??",
-		"choice1": "<script>",
-		"choice2": "<javascript>",
-		"choice3": "<js>",
-		"choice4": "<scripting>",
-		"answer": 1
+		"question": "Inside which HTML element do we put the JavaScript?",
+		"incorrect_answers": ["<javascript>", "<js>", "<scripting>"],
+		"correct_answer": "<script>"
 	},
 	{
 		"question": "What is the correct syntax for referring to an external script called 'xxx.js'?",
-		"choice1": "<script href='xxx.js'>",
-		"choice2": "<script name='xxx.js'>",
-		"choice3": "<script src='xxx.js'>",
-		"choice4": "<script file='xxx.js'>",
-		"answer": 3
+		"incorrect_answers": ["<script href='xxx.js'>", "<script name='xxx.js'>", "<script file='xxx.js'>"],
+		"correct_answer": "<script src='xxx.js'>"
 	},
 	{
 		"question": " How do you write 'Hello World' in an alert box?",
-		"choice1": "msgBox('Hello World');",
-		"choice2": "alertBox('Hello World');",
-		"choice3": "msg('Hello World');",
-		"choice4": "alert('Hello World');",
-		"answer": 4
+		"incorrect_answers": ["msgBox('Hello World');", "alertBox('Hello World');", "msg('Hello World');"],
+		"correct_answer": "alert('Hello World');"
 	},
 	{
 		"question": "What is the correct syntax for referring to an css file named 'style.css'?",
-		"choice1": "<link href='style.css'>",
-		"choice2": "<style src='style.css'>",
-		"choice3": "<link src='style.css'>",
-		"choice4": "<style file='style.css'>",
-		"answer": 1
+		"incorrect_answers": ["<style src='style.css'>", "<link src='style.css'>", "<style file='style.css'>"],
+		"correct_answer": "<link href='style.css'>"
 	},
 	{
 		"question": "How many <h> tags are valid?",
-		"choice1": "4",
-		"choice2": "5",
-		"choice3": "6",
-		"choice4": "7",
-		"answer": 3
+		"incorrect_answers": ["4", "5", "7"],
+		"correct_answer": "6"
 	}
 ]
