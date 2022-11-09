@@ -33,8 +33,18 @@ fetch('../js/questions.json')
 			return formattedQuestion
 		})
 
+		startGame()
 	})
 	.catch((err) => {
 		console.error(err)
 	})
 
+const CORRECT_BONUS = 10
+const MAX_QUESTIONS = 5
+
+startGame = () => {
+	questionCounter = 0
+	score = 0
+	availableQuestions = [...questions]
+	loader.classList.add('hidden')
+}

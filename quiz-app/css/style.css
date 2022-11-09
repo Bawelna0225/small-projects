@@ -42,6 +42,7 @@
 }
 .container .answers .answer .text {
   padding: 10px;
+  width: 100%;
 }
 .container .answers .answer:hover {
   cursor: pointer;
@@ -84,4 +85,69 @@
   width: 50%;
   height: 100%;
   background-color: rgb(0, 102, 255);
+}
+
+#loader {
+  z-index: 1;
+  background-color: white;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  visibility: visible;
+}
+#loader::before {
+  content: "";
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  border: 15px solid transparent;
+  border-top: 15px solid rgb(0, 102, 255);
+  border-left: 15px solid #ed5050;
+  border-right: 15px solid #50ed5b;
+  -webkit-animation: spin 1s linear infinite;
+          animation: spin 1s linear infinite;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+}
+#loader.hidden {
+  -webkit-animation: 500ms fade-out linear forwards;
+          animation: 500ms fade-out linear forwards;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
 }/*# sourceMappingURL=style.css.map */
