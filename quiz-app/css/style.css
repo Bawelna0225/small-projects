@@ -58,6 +58,23 @@
   background-color: rgb(195, 6, 6);
 }
 
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: space-evenly;
+  padding: 20px;
+  width: min(100cqw, 500px);
+  border-radius: 4px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.104);
+  gap: 20px;
+}
+.home h1 {
+  text-align: center;
+  font-size: 3rem;
+  color: rgb(0, 102, 255);
+}
+
 .score {
   position: absolute;
   right: 3vw;
@@ -203,4 +220,47 @@ form button:disabled {
   border: 1px solid rgb(0, 102, 255);
   text-align: center;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.065);
+}
+
+.highScores {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  padding: 30px;
+  border-radius: 4px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.11);
+}
+.highScores h1 {
+  font-size: 3.2rem;
+  color: rgb(0, 102, 255);
+  text-transform: uppercase;
+  font-weight: 100;
+}
+.highScores .highScoresList {
+  list-style-type: none;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.highScores .highScoresList li {
+  font-size: 1.3rem;
+}
+.highScores .highScoresList li span {
+  color: rgb(0, 102, 255);
+}
+.highScores a {
+  text-align: center;
+  width: 50%;
+  padding: 15px;
+  background-color: rgb(0, 102, 255);
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.169);
+}
+.highScores a:hover {
+  filter: brightness(0.95);
 }/*# sourceMappingURL=style.css.map */
