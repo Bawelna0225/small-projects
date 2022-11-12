@@ -10,6 +10,11 @@ body {
 	perspective: 400px;
 	height: 100vh;
 }
+#sky {
+	width: 100vw;
+	height: 70vh;
+	background-image: linear-gradient(to bottom, #040a24, #1d0524);
+}
 #bottom {
 	position: absolute;
 	z-index: 2;
