@@ -13,7 +13,33 @@ body {
 #sky {
 	width: 100vw;
 	height: 70vh;
-	background-image: linear-gradient(to bottom, #040a24, #1d0524);
+	background-image: linear-gradient(to bottom, #120032 0% 50%, #2f074d 70% 80%, #6c0b36 95% 100%);
+}
+#sun {
+	width: 550px;
+	height: 550px;
+	border-radius: 50%;
+	position: absolute;
+	top: 40%;
+	left: 50%;
+	translate: -50%;
+	filter: blur(8px);
+	z-index: 1;
+	background-image: linear-gradient(yellow, orange, orangered, red);
+	&::before {
+		content: '';
+		width: 570px;
+		height: 570px;
+		border-radius: 50%;
+		background-image: linear-gradient(rgb(255, 0, 208), rgb(255, 0, 157), orangered, red);
+		position: absolute;
+		z-index: -20 !important;
+		opacity: 0.8;
+		filter: blur(8px);
+		top: -2%;
+		left: 50%;
+		translate: -50%;
+	}
 }
 #bottom {
 	position: absolute;
@@ -22,7 +48,7 @@ body {
 	height: 100%;
 	transform: perspective(400px) rotateX(var(--rotate));
 	bottom: -15%;
-	background: linear-gradient(90deg, hotpink -60%, #040a24 40%, #040a24 60%, hotpink 140%);
+	background: linear-gradient(90deg, hotpink -60%, #0D072C 40%, #0D072C 60%, hotpink 140%);
 	clip-path: polygon(0 100%, 0 55%, 100% 55%, 100% 100%);
 	#ground {
 		position: absolute;
@@ -30,8 +56,8 @@ body {
 		width: 100%;
 		height: 55%;
 
-		background: repeating-linear-gradient(white 2px, transparent 3px, transparent 30px), repeating-linear-gradient(90deg, white 2px, transparent 3px, transparent 40px);
-		filter: drop-shadow(0 0 1px cyan) drop-shadow(0 0 3px cyan) drop-shadow(0 0 7px cyan);
+		background: repeating-linear-gradient(#AB0356 2px, transparent 3px, transparent 30px), repeating-linear-gradient(90deg, #AB0356 2px, transparent 3px, transparent 40px);
+		filter: drop-shadow(0 0 1px #AB0356) drop-shadow(0 0 3px #AB0356) drop-shadow(0 0 7px #AB0356);
 		animation: move 20s linear infinite;
 	}
 }
