@@ -4,18 +4,22 @@
 }
 :root {
 	--rotate: 113deg;
+	--sun-gradient: linear-gradient(rgb(255, 0, 208), rgb(255, 0, 157), orangered, red);
+	--sky-gradient: linear-gradient(to bottom, #120032 0% 50%, #2f074d 70% 80%, #6c0b36 95% 100%);
+	--floor-color: #ab0356;
+	--line-color: #ab0356;
 }
 body {
 	position: relative;
-    overflow: hidden;
+	overflow: hidden;
 	perspective: 400px;
 	height: 100vh;
-    background-image: linear-gradient(to bottom, #120032 0% 50%, #2f074d 70% 80%, #6c0b36 95% 100%);
+	background-image: var(--sky-gradient)
 }
 #sky {
 	width: 100vw;
 	height: 70vh;
-	background-image: linear-gradient(to bottom, #120032 0% 50%, #2f074d 70% 80%, #6c0b36 95% 100%);
+	background-image: var(--sky-gradient);
 }
 #sun {
 	width: 550px;
@@ -27,13 +31,13 @@ body {
 	translate: -50%;
 	filter: blur(8px);
 	z-index: 1;
-	background-image: linear-gradient(yellow, orange, orangered, red);
+	background-image: var(--sun-gradient);
 	&::before {
 		content: '';
 		width: 570px;
 		height: 570px;
 		border-radius: 50%;
-		background-image: linear-gradient(rgb(255, 0, 208), rgb(255, 0, 157), orangered, red);
+		background-image: var(--sun-gradient);
 		position: absolute;
 		z-index: -20 !important;
 		opacity: 0.8;
@@ -50,7 +54,7 @@ body {
 	height: 100%;
 	transform: perspective(400px) rotateX(var(--rotate));
 	bottom: -15%;
-	background: linear-gradient(90deg, hotpink -60%, #0D072C 40%, #0D072C 60%, hotpink 140%);
+	background: linear-gradient(90deg, hotpink -60%, #0d072c 40%, #0d072c 60%, hotpink 140%);
 	clip-path: polygon(0 100%, 0 55%, 100% 55%, 100% 100%);
 	#ground {
 		position: absolute;
@@ -58,8 +62,8 @@ body {
 		width: 100%;
 		height: 55%;
 
-		background: repeating-linear-gradient(#AB0356 2px, transparent 3px, transparent 30px), repeating-linear-gradient(90deg, #AB0356 2px, transparent 3px, transparent 40px);
-		filter: drop-shadow(0 0 1px #AB0356) drop-shadow(0 0 3px #AB0356) drop-shadow(0 0 7px #AB0356);
+		background: repeating-linear-gradient(var(--line-color) 2px, transparent 3px, transparent 30px), repeating-linear-gradient(90deg, var(--line-color) 2px, transparent 3px, transparent 40px);
+		filter: drop-shadow(0 0 1px var(--floor-color)) drop-shadow(0 0 3px var(--floor-color)) drop-shadow(0 0 7px var(--floor-color));
 		animation: move 20s linear infinite;
 	}
 }
@@ -74,7 +78,7 @@ $stars: 25;
 }
 .star {
 	background-color: #fff;
-    box-shadow: 0px 0px 10px rgb(23, 23, 112);
+	box-shadow: 0px 0px 10px rgb(23, 23, 112);
 	border-radius: 50%;
 	filter: blur(1px);
 	aspect-ratio: 1 / 1;
