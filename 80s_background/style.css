@@ -9,9 +9,10 @@
 
 body {
   position: relative;
-  overflow-x: hidden;
+  overflow: hidden;
   perspective: 400px;
   height: 100vh;
+  background-image: linear-gradient(to bottom, #120032 0% 50%, #2f074d 70% 80%, #6c0b36 95% 100%);
 }
 
 #sky {
@@ -307,5 +308,20 @@ body {
 @keyframes blink {
   to {
     opacity: 1;
+  }
+}
+@media (max-height: 1250px) {
+  :root {
+    --rotate: 105deg;
+  }
+}
+@media (max-height: 800px) {
+  :root {
+    --rotate: 95deg;
+  }
+}
+@media (max-height: 600px) {
+  :root {
+    --rotate: 85deg;
   }
 }/*# sourceMappingURL=style.css.map */
