@@ -4,6 +4,7 @@
 }
 :root {
 	--rotate: 113deg;
+	--sun-top-position: 40%;
 	--sun-gradient: linear-gradient(rgb(255, 0, 208), rgb(255, 0, 157), orangered, red);
 	--sky-gradient: linear-gradient(to bottom, #120032 0% 50%, #2f074d 70% 80%, #6c0b36 95% 100%);
 	--floor-color: #ab0356;
@@ -14,7 +15,7 @@ body {
 	overflow: hidden;
 	perspective: 400px;
 	height: 100vh;
-	background-image: var(--sky-gradient)
+	background-image: var(--sky-gradient);
 }
 #sky {
 	width: 100vw;
@@ -26,7 +27,7 @@ body {
 	height: 550px;
 	border-radius: 50%;
 	position: absolute;
-	top: 40%;
+	top: var(--sun-top-position);
 	left: 50%;
 	translate: -50%;
 	filter: blur(8px);
@@ -99,15 +100,18 @@ $stars: 25;
 @media (max-height: 1250px) {
 	:root {
 		--rotate: 105deg;
+		--sun-top-position: 35%;
 	}
 }
 @media (max-height: 800px) {
 	:root {
 		--rotate: 95deg;
+		--sun-top-position: 25%;
 	}
 }
 @media (max-height: 600px) {
 	:root {
 		--rotate: 85deg;
+		--sun-top-position: 10%;
 	}
 }
