@@ -72,6 +72,25 @@ body {
   outline: none;
   border: none;
 }
+.select .dropdown {
+  position: absolute;
+  top: 70px;
+  border-radius: var(--border-radius);
+  width: 100%;
+  background-color: #fff;
+  box-shadow: var(--box-shadow);
+  overflow: hidden;
+  transition: 0.25s;
+}
+.select .dropdown .option {
+  padding: 12px 20px;
+  cursor: pointer;
+  color: var(--text-color);
+}
+.select .dropdown .option:hover {
+  background-color: var(--hover-color);
+  color: var(--hover-text-color);
+}
 .select.open::before {
   right: 20px;
 }
