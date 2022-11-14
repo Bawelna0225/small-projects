@@ -79,6 +79,8 @@ body {
 		background-color: #fff;
 		box-shadow: var(--box-shadow);
 		overflow: hidden;
+		visibility: hidden;
+		opacity: 0;
 		transition: 0.25s;
 		.option {
 			padding: 12px 20px;
@@ -96,6 +98,10 @@ body {
 		}
 		&::after {
 			right: 28px;
+		}
+		.dropdown {
+			opacity: 1;
+			visibility: visible;
 		}
 	}
 }

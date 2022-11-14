@@ -80,6 +80,8 @@ body {
   background-color: #fff;
   box-shadow: var(--box-shadow);
   overflow: hidden;
+  visibility: hidden;
+  opacity: 0;
   transition: 0.25s;
 }
 .select .dropdown .option {
@@ -96,4 +98,8 @@ body {
 }
 .select.open::after {
   right: 28px;
+}
+.select.open .dropdown {
+  opacity: 1;
+  visibility: visible;
 }/*# sourceMappingURL=style.css.map */
