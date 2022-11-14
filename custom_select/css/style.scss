@@ -25,6 +25,12 @@ body {
 	margin-top: 100px;
 	width: 300px;
 	height: 50px;
+	&:hover {
+		&::before,
+		&::after {
+			background-color: var(--hover-color);
+		}
+	}
 	&::before {
 		content: '';
 		position: absolute;
@@ -64,5 +70,13 @@ body {
 		box-shadow: var(--box-shadow);
 		outline: none;
 		border: none;
+	}
+	&.open {
+		&::before {
+			right: 20px;
+		}
+		&::after {
+			right: 28px;
+		}
 	}
 }
