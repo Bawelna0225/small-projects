@@ -51,6 +51,7 @@ body {
 	position: relative;
 	top: -80px;
 	transform: skewY(-20deg);
+    animation: animate 5s linear infinite;
 	.layer {
 		position: relative;
 		z-index: 2;
@@ -117,4 +118,9 @@ body {
 			}
 		}
 	}
+}
+@keyframes animate {
+  100% {
+    filter: hue-rotate(360deg);
+  }
 }
