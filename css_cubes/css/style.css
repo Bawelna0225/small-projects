@@ -15,4 +15,23 @@ body {
   position: relative;
   top: -80px;
   transform: skewY(-20deg);
+}
+.cube .layer {
+  position: relative;
+  z-index: 2;
+}
+.cube .layer .column {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+.cube .layer .column span {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background-color: #dcdcdc;
 }/*# sourceMappingURL=style.css.map */
