@@ -20,6 +20,14 @@ body {
   position: relative;
   z-index: 2;
 }
+.cube .layer:nth-child(2) {
+  z-index: 1;
+  translate: -60px -60px;
+}
+.cube .layer:nth-child(3) {
+  z-index: 3;
+  translate: 60px 60px;
+}
 .cube .layer .column {
   position: absolute;
   display: flex;
@@ -37,6 +45,19 @@ body {
   background-color: #dcdcdc;
   z-index: calc(1 * var(--i));
   transition: 1.5s;
+}
+.cube .layer .column span:hover {
+  transition: 0s;
+  background-color: #ef4149;
+  filter: drop-shadow(0px 0px 30px #ef4149);
+}
+.cube .layer .column span:hover::before {
+  transition: 0s;
+  background-color: #f75d64;
+}
+.cube .layer .column span:hover::after {
+  transition: 0s;
+  background-color: #f13e55;
 }
 .cube .layer .column span::before {
   content: "";
