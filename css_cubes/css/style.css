@@ -27,6 +27,7 @@ body {
   justify-content: center;
   align-items: center;
   gap: 30px;
+  translate: calc(-70px * var(--x)) calc(-60px * var(--y));
 }
 .cube .layer .column span {
   position: relative;
