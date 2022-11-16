@@ -21,6 +21,10 @@ body {
 	z-index: 100;
 	border-radius: 4px;
 	overflow: hidden;
+	&.active {
+		width: 250px;
+		height: 350px;
+	}
 	.toggle {
 		position: relative;
 		top: 0;
@@ -45,6 +49,12 @@ body {
 			color: #fff;
 			font-weight: 400;
 			transition: 0.5s;
+		}
+		&.active {
+			background-color: #2196f3;
+			&::before {
+				rotate: 315deg;
+			}
 		}
 	}
 }
