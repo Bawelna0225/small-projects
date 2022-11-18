@@ -67,6 +67,11 @@ function PaginationButton (page, items) {
 	button.addEventListener('click', function () {
 		current_page = page;
 		DisplayList(items, list_element, rows, current_page);
+
+		let current_btn = document.querySelector('button.active');
+		current_btn.classList.remove('active');
+
+		button.classList.add('active');
 	});
 
 	return button;
