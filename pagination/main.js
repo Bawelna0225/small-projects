@@ -37,6 +37,8 @@ firstPage.onclick = () => {
 lastPage.onclick = () => {
 	let page_count = Math.ceil(list_items.length / rows)
 	DisplayList(list_items, list_element, rows, page_count)
+	document.querySelector('button.active').classList.remove('active')
+	document.querySelector('.pagination-numbers').lastElementChild.classList.add('active')
 }
 
 let current_page = 1
