@@ -25,7 +25,13 @@ const list_items = [
 
 const list_element = document.querySelector('.list');
 const pagination = document.querySelector('.pagination-numbers');
+const firstPage = document.querySelector('.first-page')
 
+firstPage.onclick = () => {
+	DisplayList(list_items, list_element, rows, 1);
+	document.querySelector('button.active').classList.remove('active')
+	document.querySelectorAll('.pagination-numbers button')[0].classList.add('active')
+}
 
 let current_page = 1;
 let rows = 5;
