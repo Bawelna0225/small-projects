@@ -49,6 +49,12 @@ main .pagination {
   padding: 20px;
   gap: 8px;
 }
+main .pagination .pagination-numbers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
 main .pagination button {
   border-radius: 4px;
   cursor: pointer;

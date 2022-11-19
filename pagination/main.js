@@ -24,7 +24,8 @@ const list_items = [
 ];
 
 const list_element = document.querySelector('.list');
-const pagination = document.querySelector('.pagination');
+const pagination = document.querySelector('.pagination-numbers');
+
 
 let current_page = 1;
 let rows = 5;
@@ -79,3 +80,4 @@ function PaginationButton (page, items) {
 
 DisplayList(list_items, list_element, rows, current_page);
 SetupPagination(list_items, pagination, rows);
+
