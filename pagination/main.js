@@ -52,6 +52,13 @@ prevPageButton.onclick = () => {
 	prevActive.classList.add('active')
 }
 
+nextPageButton.onclick = () => {
+	DisplayList(list_items, list_element, rows, ++current_page)
+	let nextActive = document.querySelector('button.active').nextElementSibling
+	document.querySelector('button.active').classList.remove('active')
+	nextActive.classList.add('active')
+}
+
 let current_page = 1
 let rows = 5
 
