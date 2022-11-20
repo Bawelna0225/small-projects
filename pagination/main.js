@@ -25,20 +25,29 @@ const list_items = [
 
 const list_element = document.querySelector('.list')
 const pagination = document.querySelector('.pagination-numbers')
-const firstPage = document.querySelector('.first-page')
-const lastPage = document.querySelector('.last-page')
+const firstPageButton = document.querySelector('.first-page')
+const lastPageButton = document.querySelector('.last-page')
+const prevPageButton = document.querySelector('.prev-page')
+const nextPageButton = document.querySelector('.next-page')
 
-firstPage.onclick = () => {
+firstPageButton.onclick = () => {
 	DisplayList(list_items, list_element, rows, 1)
 	document.querySelector('button.active').classList.remove('active')
 	document.querySelectorAll('.pagination-numbers button')[0].classList.add('active')
 }
 
-lastPage.onclick = () => {
+lastPageButton.onclick = () => {
 	let page_count = Math.ceil(list_items.length / rows)
 	DisplayList(list_items, list_element, rows, page_count)
 	document.querySelector('button.active').classList.remove('active')
 	document.querySelector('.pagination-numbers').lastElementChild.classList.add('active')
+}
+
+prevPageButton.onclick = () => {
+	DisplayList(list_items, list_element, rows, --current_page)
+	let prevActive = document.querySelector('button.active').previousElementSibling
+	document.querySelector('button.active').classList.remove('active')
+	prevActive.classList.add('active')
 }
 
 let current_page = 1
