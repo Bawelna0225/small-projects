@@ -32,6 +32,7 @@ const nextPageButton = document.querySelector('.next-page')
 
 firstPageButton.onclick = () => {
 	DisplayList(list_items, list_element, rows, 1)
+	current_page = 1
 	document.querySelector('button.active').classList.remove('active')
 	document.querySelectorAll('.pagination-numbers button')[0].classList.add('active')
 }
@@ -39,6 +40,7 @@ firstPageButton.onclick = () => {
 lastPageButton.onclick = () => {
 	let page_count = Math.ceil(list_items.length / rows)
 	DisplayList(list_items, list_element, rows, page_count)
+	current_page = page_count
 	document.querySelector('button.active').classList.remove('active')
 	document.querySelector('.pagination-numbers').lastElementChild.classList.add('active')
 }
