@@ -46,6 +46,7 @@ lastPageButton.onclick = () => {
 }
 
 prevPageButton.onclick = () => {
+	if (current_page === 1) return
 	DisplayList(list_items, list_element, rows, --current_page)
 	let prevActive = document.querySelector('button.active').previousElementSibling
 	document.querySelector('button.active').classList.remove('active')
@@ -53,6 +54,8 @@ prevPageButton.onclick = () => {
 }
 
 nextPageButton.onclick = () => {
+	let page_count = Math.ceil(list_items.length / rows)
+	if (current_page === page_count) return
 	DisplayList(list_items, list_element, rows, ++current_page)
 	let nextActive = document.querySelector('button.active').nextElementSibling
 	document.querySelector('button.active').classList.remove('active')
