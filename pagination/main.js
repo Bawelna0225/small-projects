@@ -43,7 +43,17 @@ function checkIfFirstPage() {
 		prevPageButton.disabled = false
 	}
 }
+function checkIfLastPage() {
+	if (current_page === page_count) {
+		lastPageButton.disabled = true
+		nextPageButton.disabled = true
+	} else {
+		lastPageButton.disabled = false
+		nextPageButton.disabled = false
+	}
+}
 checkIfFirstPage()
+checkIfLastPage()
 
 firstPageButton.onclick = () => {
 	DisplayList(list_items, list_element, rows, 1)
@@ -58,6 +68,7 @@ lastPageButton.onclick = () => {
 	current_page = page_count
 	document.querySelector('button.active').classList.remove('active')
 	document.querySelector('.pagination-numbers').lastElementChild.classList.add('active')
+	checkIfLastPage()
 }
 
 prevPageButton.onclick = () => {
@@ -75,6 +86,7 @@ nextPageButton.onclick = () => {
 	let nextActive = document.querySelector('button.active').nextElementSibling
 	document.querySelector('button.active').classList.remove('active')
 	nextActive.classList.add('active')
+	checkIfLastPage()
 }
 
 function DisplayList(items, wrapper, rows_per_page, page) {
@@ -121,6 +133,7 @@ function PaginationButton(page, items) {
 
 		button.classList.add('active')
 		checkIfFirstPage()
+		checkIfLastPage()
 	})
 
 	return button
