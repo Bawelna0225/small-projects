@@ -30,15 +30,30 @@ const lastPageButton = document.querySelector('.last-page')
 const prevPageButton = document.querySelector('.prev-page')
 const nextPageButton = document.querySelector('.next-page')
 
+let current_page = 1
+let rows = 5
+let page_count = Math.ceil(list_items.length / rows)
+
+function checkIfFirstPage() {
+	if (current_page === 1) {
+		firstPageButton.disabled = true
+		prevPageButton.disabled = true
+	} else {
+		firstPageButton.disabled = false
+		prevPageButton.disabled = false
+	}
+}
+checkIfFirstPage()
+
 firstPageButton.onclick = () => {
 	DisplayList(list_items, list_element, rows, 1)
 	current_page = 1
 	document.querySelector('button.active').classList.remove('active')
 	document.querySelectorAll('.pagination-numbers button')[0].classList.add('active')
+	checkIfFirstPage()
 }
 
 lastPageButton.onclick = () => {
-	let page_count = Math.ceil(list_items.length / rows)
 	DisplayList(list_items, list_element, rows, page_count)
 	current_page = page_count
 	document.querySelector('button.active').classList.remove('active')
@@ -51,19 +66,16 @@ prevPageButton.onclick = () => {
 	let prevActive = document.querySelector('button.active').previousElementSibling
 	document.querySelector('button.active').classList.remove('active')
 	prevActive.classList.add('active')
+	checkIfFirstPage()
 }
 
 nextPageButton.onclick = () => {
-	let page_count = Math.ceil(list_items.length / rows)
 	if (current_page === page_count) return
 	DisplayList(list_items, list_element, rows, ++current_page)
 	let nextActive = document.querySelector('button.active').nextElementSibling
 	document.querySelector('button.active').classList.remove('active')
 	nextActive.classList.add('active')
 }
-
-let current_page = 1
-let rows = 5
 
 function DisplayList(items, wrapper, rows_per_page, page) {
 	wrapper.innerHTML = ''
@@ -108,6 +120,7 @@ function PaginationButton(page, items) {
 		current_btn.classList.remove('active')
 
 		button.classList.add('active')
+		checkIfFirstPage()
 	})
 
 	return button
