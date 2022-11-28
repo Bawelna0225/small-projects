@@ -28,4 +28,14 @@ section .card .cut-off-text {
   max-height: calc(var(--max-lines) * 1em * var(--line-height));
   overflow: hidden;
   position: relative;
+}
+section .card .expand-btn {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: 1px solid black;
+  padding: 0.5em;
+  border-radius: 0.25em;
+  cursor: pointer;
+  margin-top: 1em;
 }/*# sourceMappingURL=style.css.map */
