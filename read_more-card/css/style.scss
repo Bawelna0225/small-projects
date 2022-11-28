@@ -36,9 +36,15 @@ section {
 			border-radius: 0.25em;
 			cursor: pointer;
 			margin-top: 1em;
-
-
-
+			&:hover {
+				background-color: #e6e5e5;
+			}
+			&::before {
+				content: 'Expand';
+			}
+			&:checked::before {
+				content: 'Collapse';
+			}
 		}
 	}
 }

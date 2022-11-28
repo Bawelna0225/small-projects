@@ -38,4 +38,13 @@ section .card .expand-btn {
   border-radius: 0.25em;
   cursor: pointer;
   margin-top: 1em;
+}
+section .card .expand-btn:hover {
+  background-color: #e6e5e5;
+}
+section .card .expand-btn::before {
+  content: "Expand";
+}
+section .card .expand-btn:checked::before {
+  content: "Collapse";
 }/*# sourceMappingURL=style.css.map */
