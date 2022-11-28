@@ -5,3 +5,11 @@
 	box-sizing: border-box;
 	font-family: 'Poppins', sans-serif;
 }
+section {
+    display: grid;
+    place-content: center;
+    width: min(calc(100vw - 2rem), 1000px);
+    margin: 0 auto;
+    gap: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
