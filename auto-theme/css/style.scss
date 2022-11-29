@@ -26,6 +26,48 @@ body {
 	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05);
 	padding: 20px;
 	.theme-switcher {
+		position: relative;
+		background-color: var(--bg-secondary);
+		border-radius: 10px;
+		display: flex;
+		padding: 0 3px;
+		align-items: center;
+		overflow: hidden;
+		.slider {
+			display: block;
+			position: absolute;
+			z-index: 1;
+			width: calc((100% - 6px) / 3);
+			top: 3px;
+			transform: translatex(-110%);
+			bottom: 3px;
+			border-radius: 6px;
+			transition: 0.15s ease, transform 0.25s ease-out;
+			background-color: var(--bg-button);
+			box-shadow: var(--slider-shadow);
+		}
+		input {
+			display: none;
 
+			&:nth-of-type(1):checked ~ .slider {
+				transform: translateX(0);
+			}
+
+			&:nth-of-type(2):checked ~ .slider {
+				transform: translateX(100%);
+			}
+
+			&:nth-of-type(3):checked ~ .slider {
+				transform: translateX(200%);
+			}
+		}
+		label {
+			cursor: pointer;
+			position: relative;
+            user-select: none;
+			padding: 10px 15px;
+			z-index: 2;
+			width: calc(100% / 3);
+		}
 	}
 }
