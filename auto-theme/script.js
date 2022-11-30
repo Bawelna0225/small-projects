@@ -5,13 +5,21 @@ let autoSettings = document.getElementsByName('auto-setting')
 function checkAutoTheme() {
 	if (html[0].classList.contains('auto')) {
 		document.querySelector('.auto-theme-settings').style.display = 'block'
+		if (document.getElementById('device-theme').checked) {
+			localStorage.setItem('autoThemeSetting', 'device-theme')
 
+		}
 	} else {
 		document.querySelector('.auto-theme-settings').style.display = 'none'
 	}
 }
 
-
+autoSettings.forEach((setting) => {
+	setting.addEventListener('click', () => {
+		localStorage.setItem('autoThemeSetting', setting.id)
+		checkAutoTheme()
+	})
+})
 
 radios.forEach((radio) => {
 	radio.addEventListener('click', () => {
