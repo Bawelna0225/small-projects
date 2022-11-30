@@ -1,10 +1,10 @@
-var html = document.getElementsByTagName('html')
-var radios = document.getElementsByName('theme')
+let html = document.getElementsByTagName('html')
+let radios = document.getElementsByName('theme')
+let autoSettings = document.getElementsByName('auto-setting')
 
-if (localStorage.getItem('currentTheme') != null || !localStorage.getItem('currentTheme') != []) {
-    html[0].classList.add(localStorage.getItem('currentTheme'))
-	document.getElementById(localStorage.getItem('currentTheme')).checked = true
-}
+
+
+
 
 radios.forEach((radio) => {
 	radio.addEventListener('click', () => {
@@ -13,3 +13,12 @@ radios.forEach((radio) => {
 		localStorage.setItem('currentTheme', radio.id)
 	})
 })
+
+if (localStorage.getItem('currentTheme') == null || localStorage.getItem('currentTheme') == []) {
+	html[0].classList.add('auto')
+	localStorage.setItem('currentTheme', 'auto')
+} else {
+	html[0].classList.add(localStorage.getItem('currentTheme'))
+	document.getElementById(localStorage.getItem('currentTheme')).checked = true
+
+}
