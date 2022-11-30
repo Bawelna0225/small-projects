@@ -10,6 +10,17 @@ function checkAutoTheme() {
 			if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
 				html[0].classList.add('dark')
 			}
+		} else if (document.getElementById('time-schedule').checked) {
+			localStorage.setItem('autoThemeSetting', 'time-schedule')
+			let today = new Date()
+			let hour = today.getHours()
+			if (hour <= 7 || hour > 17) {
+				html[0].classList.add('dark')
+			} else {
+				if (html[0].classList.contains('dark')) {
+					html[0].classList.remove('dark')
+				}
+			}
 		}
 	} else {
 		document.querySelector('.auto-theme-settings').style.display = 'none'
