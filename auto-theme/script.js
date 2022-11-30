@@ -7,7 +7,9 @@ function checkAutoTheme() {
 		document.querySelector('.auto-theme-settings').style.display = 'block'
 		if (document.getElementById('device-theme').checked) {
 			localStorage.setItem('autoThemeSetting', 'device-theme')
-
+			if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+				html[0].classList.add('dark')
+			}
 		}
 	} else {
 		document.querySelector('.auto-theme-settings').style.display = 'none'
@@ -37,6 +39,10 @@ if (localStorage.getItem('currentTheme') == null || localStorage.getItem('curren
 } else {
 	html[0].classList.add(localStorage.getItem('currentTheme'))
 	document.getElementById(localStorage.getItem('currentTheme')).checked = true
-
+	if (localStorage.getItem('currentTheme') === 'auto') {
+		document.getElementById(localStorage.getItem('autoThemeSetting')).checked = true
+	} else {
+		html[0].classList.remove('auto')
+	}
 	checkAutoTheme()
 }
