@@ -80,4 +80,19 @@ body {
   padding: 10px;
   position: absolute;
   z-index: 2;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg-color: rgb(250, 250, 250);
+    --card-color: rgb(255, 255, 255);
+    --card-border-color: rgba(255, 255, 255, 0.1);
+    --light-color: rgba(33, 33, 33, 0.06);
+    --hover-border-color: rgba(42, 42, 42, 0.4);
+  }
+}
+@media (width < 600px) {
+  .cards-container .card {
+    width: 100%;
+  }
 }/*# sourceMappingURL=style.css.map */
