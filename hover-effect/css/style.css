@@ -20,4 +20,15 @@ body {
   margin: 0px;
   overflow: hidden;
   padding: 0px;
+}
+
+.cards-container {
+  width: calc(100% - 2rem);
+  max-width: 915px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  justify-content: center;
+  align-items: center;
 }/*# sourceMappingURL=style.css.map */
