@@ -43,6 +43,28 @@ body {
   position: relative;
   width: min(100%, 300px);
 }
+.cards-container .card:hover::before {
+  opacity: 1;
+}
+.cards-container .card::before, .cards-container .card::after {
+  border-radius: inherit;
+  content: "";
+  height: 100%;
+  left: 0px;
+  opacity: 0;
+  position: absolute;
+  top: 0px;
+  transition: opacity 500ms;
+  width: 100%;
+}
+.cards-container .card::before {
+  background: radial-gradient(800px circle at var(--mouse-x) var(--mouse-y), rgba(255, 255, 255, 0.06), transparent 40%);
+  z-index: 3;
+}
+.cards-container .card::after {
+  background: radial-gradient(600px circle at var(--mouse-x) var(--mouse-y), rgba(255, 255, 255, 0.4), transparent 40%);
+  z-index: 1;
+}
 .cards-container .card > .card__content {
   background-color: var(--card-color);
   border-radius: inherit;
