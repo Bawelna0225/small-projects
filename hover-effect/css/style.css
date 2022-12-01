@@ -31,4 +31,26 @@ body {
   gap: 7px;
   justify-content: center;
   align-items: center;
+}
+.cards-container .card {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  cursor: pointer;
+  place-self: center;
+  display: flex;
+  height: 260px;
+  flex-direction: column;
+  position: relative;
+  width: min(100%, 300px);
+}
+.cards-container .card > .card__content {
+  background-color: var(--card-color);
+  border-radius: inherit;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  inset: 1px;
+  padding: 10px;
+  position: absolute;
+  z-index: 2;
 }/*# sourceMappingURL=style.css.map */
