@@ -67,7 +67,7 @@ body {
 			background: radial-gradient(600px circle at var(--mouse-x) var(--mouse-y), var(--hover-border-color), transparent 40%);
 			z-index: 1;
 		}
-		& > .card__content {
+		&__content {
 			background-color: var(--card-color);
 			border-radius: inherit;
 			display: flex;
