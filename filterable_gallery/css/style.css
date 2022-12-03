@@ -15,7 +15,7 @@ body {
 nav {
   display: flex;
   justify-content: start;
-  overflow: auto;
+  overflow-x: auto;
   padding: 10px;
 }
 nav .items {
@@ -41,14 +41,41 @@ nav .items .item.active {
 
 .gallery {
   margin: 0 auto;
-  margin-top: 30px;
+  margin-top: 70px;
   display: grid;
   width: min(100vw - 1rem, 1000px);
   gap: 10px;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
 }
 .gallery .image img {
   width: 100%;
+  height: 200px;
   -o-object-fit: cover;
      object-fit: cover;
+}
+.gallery .image.hide {
+  display: none;
+}
+.gallery .image.show {
+  display: block;
+  -webkit-animation: appear 0.4s ease-in-out;
+          animation: appear 0.4s ease-in-out;
+}
+
+@-webkit-keyframes appear {
+  0% {
+    scale: 0;
+  }
+  100% {
+    scale: 1;
+  }
+}
+
+@keyframes appear {
+  0% {
+    scale: 0;
+  }
+  100% {
+    scale: 1;
+  }
 }/*# sourceMappingURL=style.css.map */

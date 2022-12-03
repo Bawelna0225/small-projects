@@ -6,7 +6,15 @@ for (const item of filteringItems) {
         document.querySelector('.item.active').classList.remove('active')
         item.classList.add('active')
         let currentFilter = item.getAttribute('data-filter-name')
-        console.log(currentFilter);
-  
+        galleryImages.forEach(image => {
+            let imageCategory = image.getAttribute('data-filter-name')
+            if(imageCategory === currentFilter || currentFilter == 'all') {
+                image.classList.remove('hide')
+                image.classList.add('show')
+            } else {
+                image.classList.remove('show')
+                image.classList.add('hide')
+            }
+        })
     })
 }
