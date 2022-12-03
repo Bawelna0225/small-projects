@@ -12,6 +12,12 @@ body {
   place-content: center;
 }
 
+nav {
+  display: flex;
+  justify-content: start;
+  overflow: auto;
+  padding: 10px;
+}
 nav .items {
   list-style: none;
   display: flex;
@@ -31,4 +37,18 @@ nav .items .item:hover {
 nav .items .item.active {
   background-color: rgb(46, 143, 222);
   color: white;
+}
+
+.gallery {
+  margin: 0 auto;
+  margin-top: 30px;
+  display: grid;
+  width: min(100vw - 1rem, 1000px);
+  gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+.gallery .image img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }/*# sourceMappingURL=style.css.map */
