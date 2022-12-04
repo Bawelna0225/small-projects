@@ -7,7 +7,7 @@ for (const item of filteringItems) {
         item.classList.add('active')
         let currentFilter = item.getAttribute('data-filter-name')
         galleryImages.forEach(image => {
-            let imageCategory = image.getAttribute('data-filter-name')
+            let imageCategory = image.getAttribute('data-category-name')
             if(imageCategory === currentFilter || currentFilter == 'all') {
                 image.classList.remove('hide')
                 image.classList.add('show')
