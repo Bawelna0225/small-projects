@@ -11,4 +11,24 @@ body {
   color: #fff;
   height: 100vh;
   overflow: hidden;
+}
+
+.snowflake {
+  color: #fff;
+  position: absolute;
+  top: -20px;
+  -webkit-animation: fall linear forwards;
+          animation: fall linear forwards;
+}
+
+@-webkit-keyframes fall {
+  to {
+    transform: translateX(var(--wind-transform)) translateY(105vh);
+  }
+}
+
+@keyframes fall {
+  to {
+    transform: translateX(var(--wind-transform)) translateY(105vh);
+  }
 }/*# sourceMappingURL=style.css.map */

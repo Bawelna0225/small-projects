@@ -11,3 +11,15 @@ body {
 	height: 100vh;
 	overflow: hidden;
 }
+.snowflake {
+	color: #fff;
+	position: absolute;
+	top: -20px;
+	animation: fall linear forwards;
+}
+
+@keyframes fall {
+	to {
+		transform: translateX(var(--wind-transform)) translateY(105vh);
+	}
+}
