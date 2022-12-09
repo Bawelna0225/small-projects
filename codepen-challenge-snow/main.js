@@ -1,3 +1,6 @@
+let radios = document.getElementsByName("direction");
+let html = document.getElementsByTagName("html");
+
 const createSnowFlake = () => {
 	const snowflake = document.createElement("span");
 	snowflake.classList.add("material-symbols-outlined");
@@ -28,3 +31,10 @@ const getRandomNumber = (min, max) => {
 };
 
 setInterval(createSnowFlake, 50);
+
+radios.forEach((radio) => {
+	radio.addEventListener("click", () => {
+		html[0].classList = "";
+		html[0].classList.add(radio.id);
+	});
+});
