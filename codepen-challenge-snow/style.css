@@ -39,6 +39,15 @@ body {
   border-radius: 6px;
   z-index: 2;
 }
+.wrapper .direction-switcher {
+  position: relative;
+  background-color: var(--bg-secondary);
+  border-radius: 10px;
+  display: flex;
+  padding: 0 3px;
+  align-items: center;
+  overflow: hidden;
+}
 
 .snowflake {
   color: #fff;
