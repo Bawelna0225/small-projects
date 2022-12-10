@@ -215,6 +215,28 @@ body {
 			border: none;
 			text-transform: capitalize;
 		}
+		.select-content {
+			position: absolute;
+			top: 50px;
+			border-radius: var(--border-radius);
+			width: 100%;
+			background-color: var(--primary-color);
+			box-shadow: var(--box-shadow);
+			overflow: hidden;
+			visibility: hidden;
+			opacity: 0;
+			transition: 0.25s;
+			.option {
+				padding: 12px 20px;
+				cursor: pointer;
+				color: var(--text-color);
+				text-transform: capitalize;
+				&:hover {
+					background-color: var(--hover-color);
+					color: var(--hover-text-color);
+				}
+			}
+		}
 	}
 }
 .snowflake {
