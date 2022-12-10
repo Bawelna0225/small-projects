@@ -1,12 +1,17 @@
-@import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900");
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900');
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	font-family: "Poppins", sans-serif;
+	font-family: 'Poppins', sans-serif;
 }
 :root {
-	--bg-secondary: #343434;
+	--primary-color: #343434;
+	--box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.05);
+	--border-radius: 4px;
+	--text-color: rgb(237, 237, 237);
+	--hover-color: rgb(87, 116, 221);
+	--hover-text-color: #fff;
 	--slider-shadow: inset 0 1px 1px rgb(47, 47, 47), 0 2px 3px rgb(27, 27, 27);
 	--wind-transform: 0vw;
 	&.left {
@@ -15,12 +20,6 @@
 	&.right {
 		--wind-transform: 20vw;
 	}
-}
-body {
-	background-color: #92a2ff;
-	color: #fff;
-	height: 100vh;
-	overflow: hidden;
 }
 .wrapper {
 	background-image: linear-gradient(
@@ -56,7 +55,7 @@ body {
 	z-index: 2;
 	.direction-switcher {
 		position: relative;
-		background-color: var(--bg-secondary);
+		background-color: var(--primary-color);
 		border-radius: 10px;
 		display: flex;
 		padding: 0 3px;
@@ -135,7 +134,6 @@ body {
 		}
 		input {
 			display: none;
-
 			&:nth-of-type(1):checked ~ .slider {
 				transform: translateX(0);
 			}
