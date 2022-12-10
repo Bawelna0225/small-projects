@@ -38,3 +38,12 @@ radios.forEach((radio) => {
 		html[0].classList.add(radio.id);
 	});
 });
+
+const selectMenu = document.querySelector('.select')
+const options = document.querySelectorAll('.option')
+
+
+
+selectMenu.addEventListener('click', () => {
+  selectMenu.classList.toggle('open')
+})

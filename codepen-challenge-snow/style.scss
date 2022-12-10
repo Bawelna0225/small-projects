@@ -237,6 +237,18 @@ body {
 				}
 			}
 		}
+		&.open {
+			&::before {
+				right: 20px;
+			}
+			&::after {
+				right: 28px;
+			}
+			.select-content {
+				opacity: 1;
+				visibility: visible;
+			}
+		}
 	}
 }
 .snowflake {

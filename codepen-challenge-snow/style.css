@@ -162,6 +162,16 @@ body {
   background-color: var(--hover-color);
   color: var(--hover-text-color);
 }
+.wrapper .select.open::before {
+  right: 20px;
+}
+.wrapper .select.open::after {
+  right: 28px;
+}
+.wrapper .select.open .select-content {
+  opacity: 1;
+  visibility: visible;
+}
 
 .snowflake {
   color: #fff;
