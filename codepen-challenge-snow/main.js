@@ -44,6 +44,7 @@ const options = document.querySelectorAll('.option')
 
 const setOption = (option) => {
   document.querySelector('.select input').value = option
+  document.body.classList = option
 }
 
 selectMenu.addEventListener('click', () => {

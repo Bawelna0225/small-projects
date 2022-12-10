@@ -26,6 +26,15 @@ body {
 	color: var(--text-color);
 	height: 100vh;
 	overflow: hidden;
+	&.afternoon {
+		background-color: #707ff2;
+	}
+	&.evening {
+		background-color: #2a41c3;
+	}
+	&.night {
+		background-color: #040b30;
+	}
 }
 .wrapper {
 	background-image: linear-gradient(
