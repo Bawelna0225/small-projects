@@ -28,15 +28,19 @@ body {
   color: var(--text-color);
   height: 100vh;
   overflow: hidden;
+  background-image: linear-gradient(to top, #b99396, #f7e0cd, #cedfe6, #f3f4f6);
 }
 body.afternoon {
   background-color: #707ff2;
+  background-image: linear-gradient(to top, #705557, #c2aba5, #f5e3d1, #9cc4e0, #73a3c5, #2679a8);
 }
 body.evening {
   background-color: #2a41c3;
+  background-image: linear-gradient(to top, #363D59, #605E77, #696E91, #9C81A8, #D189A8, #FEBCBC);
 }
 body.night {
   background-color: #040b30;
+  background-image: linear-gradient(to bottom, #0d122c, #0f1736, #111c40, #14204b, #162556, #17285d, #182c63, #192f6a, #19326e, #193572, #183876, #183b7a);
 }
 
 .wrapper {
