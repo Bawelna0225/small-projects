@@ -94,8 +94,46 @@ a {
 		margin-top: 20px;
 		cursor: pointer;
 		position: relative;
+		&.success {
+			background-color: green;
+		}
+		&.processing {
+			.loader {
+				opacity: 1;
+			}
+		}
+		&.fail {
+			span {
+				opacity: 1;
+			}
+		}
+		span {
+			position: absolute;
+			right: 10px;
+			top: 50%;
+			translate: 0% -50%;
+			opacity: 0;
+		}
+		.loader {
+			position: absolute;
+			right: 10px;
+			top: 50%;
+			translate: 0% -50%;
+			border: 1px solid #c8c8c8;
+			border-top-color: transparent;
+			height: 20px;
+			aspect-ratio: 1;
+			border-radius: 50%;
+			animation: spin 500ms linear infinite;
+			opacity: 0;
+		}
 	}
 	a {
 		text-align: center;
+	}
+}
+@keyframes spin {
+	to {
+		rotate: 360deg;
 	}
 }

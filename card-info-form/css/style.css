@@ -97,6 +97,48 @@ a {
   cursor: pointer;
   position: relative;
 }
+.checkout button.success {
+  background-color: green;
+}
+.checkout button.processing .loader {
+  opacity: 1;
+}
+.checkout button.fail span {
+  opacity: 1;
+}
+.checkout button span {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  translate: 0% -50%;
+  opacity: 0;
+}
+.checkout button .loader {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  translate: 0% -50%;
+  border: 1px solid #c8c8c8;
+  border-top-color: transparent;
+  height: 20px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  -webkit-animation: spin 500ms linear infinite;
+          animation: spin 500ms linear infinite;
+  opacity: 0;
+}
 .checkout a {
   text-align: center;
+}
+
+@-webkit-keyframes spin {
+  to {
+    rotate: 360deg;
+  }
+}
+
+@keyframes spin {
+  to {
+    rotate: 360deg;
+  }
 }/*# sourceMappingURL=style.css.map */
