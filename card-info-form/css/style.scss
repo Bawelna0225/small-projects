@@ -24,4 +24,38 @@ a {
 	width: min(calc(100vw - 1rem), 400px);
 	gap: 20px;
 	border-radius: 4px;
+	.input {
+		display: grid;
+		position: relative;
+	}
+	input {
+		padding: 10px;
+		border: 1px solid #ededed;
+		border-radius: 6px;
+		box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.03);
+	}
+	.card-info {
+		.card-number {
+			display: grid;
+			grid-column: 1 / -1;
+			input {
+				border-bottom: 0px;
+				border-radius: 6px 6px 0px 0px;
+			}
+		}
+		.card-details {
+			display: flex;
+			input {
+				width: 50%;
+				border-radius: 0px;
+				&:first-of-type {
+					border-bottom-left-radius: 6px;
+					border-right: 0px;
+				}
+				&:last-of-type {
+					border-bottom-right-radius: 6px;
+				}
+			}
+		}
+	}
 }

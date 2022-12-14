@@ -27,4 +27,36 @@ a {
   width: min(100vw - 1rem, 400px);
   gap: 20px;
   border-radius: 4px;
+}
+.checkout .input {
+  display: grid;
+  position: relative;
+}
+.checkout input {
+  padding: 10px;
+  border: 1px solid #ededed;
+  border-radius: 6px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.03);
+}
+.checkout .card-info .card-number {
+  display: grid;
+  grid-column: 1/-1;
+}
+.checkout .card-info .card-number input {
+  border-bottom: 0px;
+  border-radius: 6px 6px 0px 0px;
+}
+.checkout .card-info .card-details {
+  display: flex;
+}
+.checkout .card-info .card-details input {
+  width: 50%;
+  border-radius: 0px;
+}
+.checkout .card-info .card-details input:first-of-type {
+  border-bottom-left-radius: 6px;
+  border-right: 0px;
+}
+.checkout .card-info .card-details input:last-of-type {
+  border-bottom-right-radius: 6px;
 }/*# sourceMappingURL=style.css.map */
