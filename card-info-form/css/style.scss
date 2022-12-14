@@ -33,6 +33,21 @@ a {
 		border: 1px solid #ededed;
 		border-radius: 6px;
 		box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.03);
+		& + small {
+			text-transform: uppercase;
+			color: red;
+			position: absolute;
+			right: 0px;
+			font-size: 0.8rem;
+			opacity: 0;
+			top: 0px;
+		}
+		&.error {
+			border-color: red !important;
+			& + small {
+				opacity: 1;
+			}
+		}
 	}
 	.card-info {
 		.card-number {
