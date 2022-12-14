@@ -37,6 +37,26 @@ function validateForm() {
 		zipCode.classList.add('error')
 		errorFlag = true
 	}
+
+	cardNumber.addEventListener('input', () => {
+		cardNumber.classList.remove('error')
+		checkoutForm.querySelector('button').classList.remove('fail')
+	})
+	expirationDate.addEventListener('input', () => {
+		expirationDate.classList.remove('error')
+	})
+	emailInput.addEventListener('input', () => {
+		emailInput.classList.remove('error')
+	})
+	cvc.addEventListener('input', () => {
+		cvc.classList.remove('error')
+	})
+	nameOnCard.addEventListener('input', () => {
+		nameOnCard.classList.remove('error')
+	})
+	zipCode.addEventListener('input', () => {
+		zipCode.classList.remove('error')
+	})
 }
 
 const validateEmail = (emailInput) => {
