@@ -4,4 +4,27 @@
   box-sizing: border-box;
   font-family: sans-serif;
   font-size: 16px;
+}
+
+body {
+  display: grid;
+  place-content: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+label,
+p,
+a {
+  color: #3a3a3a;
+}
+
+.checkout {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05);
+  padding: 15px;
+  width: min(100vw - 1rem, 400px);
+  gap: 20px;
+  border-radius: 4px;
 }/*# sourceMappingURL=style.css.map */
