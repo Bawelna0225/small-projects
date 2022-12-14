@@ -1,14 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/style.css">
-    <script src="./main.js" defer></script>
-    <title>Credit Card Payment Form</title>
-</head>
-<body>
-    
-</body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="/css/style.css" />
+		<script src="./main.js" defer></script>
+		<title>Credit Card Payment Form</title>
+	</head>
+	<body>
+		<form class="checkout">
+			<div class="input">
+				<label for="email">Email</label>
+				<input type="email" name="email" id="email" />
+				<small>required</small>
+			</div>
+
+			<div class="card-info input">
+				<p>Card information</p>
+				<div class="card-number">
+					<input type="text" placeholder="1234 1234 1234 1234" name="card-number" id="card-number" />
+				</div>
+				<div class="card-details">
+					<input type="text" placeholder="MM/YY" name="expiration-date" id="expiration-date" />
+					<input type="text" placeholder="CVC" name="cvc" id="cvc" />
+					<small>required</small>
+				</div>
+			</div>
+			<div class="input">
+				<label for="name">Name on card</label>
+				<input type="text" name="name" id="name" />
+				<small>required</small>
+			</div>
+
+			<div class="region-info input">
+				<p>Country or region</p>
+				<select name="country" id="country"></select>
+				<input type="text" name="zip-code" id="zip" placeholder="ZIP" />
+				<small>required</small>
+			</div>
+			<button>
+				<div class="text">Pay</div>
+				<span class="material-symbols-outlined"> lock </span>
+				<div class="loader"></div>
+			</button>
+			<a href="#">Some Link</a>
+		</form>
+	</body>
 </html>
