@@ -59,4 +59,29 @@ a {
 }
 .checkout .card-info .card-details input:last-of-type {
   border-bottom-right-radius: 6px;
+}
+.checkout .region-info {
+  display: grid;
+}
+.checkout .region-info select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ededed;
+  border-radius: 6px 6px 0px 0px;
+}
+.checkout .region-info input {
+  border-radius: 0px 0px 6px 6px;
+}
+.checkout button {
+  background-color: rgb(11, 4, 50);
+  color: #c8c8c8;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  margin-top: 20px;
+  cursor: pointer;
+  position: relative;
+}
+.checkout a {
+  text-align: center;
 }/*# sourceMappingURL=style.css.map */
