@@ -92,6 +92,17 @@ function validateForm() {
 	zipCode.addEventListener('input', () => {
 		zipCode.classList.remove('error')
 	})
+	if (!errorFlag) {
+		if (cardNumber.value !== '4234 4234 1222 0000') {
+			checkoutForm.querySelector('button').classList.remove('fail')
+			checkoutForm.querySelector('button').classList.add('processing')
+			setTimeout(() => {
+				checkoutForm.querySelector('button').classList.remove('processing')
+				cardNumber.classList.add('error')
+				checkoutForm.querySelector('button').classList.add('fail')
+			}, 1500)
+		}
+	}
 }
 
 const validateEmail = (emailInput) => {
