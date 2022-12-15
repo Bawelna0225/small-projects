@@ -7,17 +7,23 @@ const nameOnCard = document.getElementById('name')
 const zipCode = document.getElementById('zip')
 
 cardNumber.addEventListener('input', formatInput(cardNumber))
+expirationDate.addEventListener("input", formatInput(expirationDate));
 
 function formatInput(element) {
-	switch(element.id){
-    case 'card-number':
-      var maskOptions = {
-        // 0 - any number
-        // a - any letter
-        // * - any character
-        mask: '0000 0000 0000 0000'
-      };
-      break
+	switch (element.id) {
+		case 'card-number':
+			var maskOptions = {
+				// 0 - any number
+				// a - any letter
+				// * - any character
+				mask: '0000 0000 0000 0000',
+			}
+			break
+		case 'expiration-date':
+			var maskOptions = {
+				mask: '00/00',
+			}
+			break
 	}
 
 	IMask(element, maskOptions)
