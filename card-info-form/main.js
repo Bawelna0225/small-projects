@@ -8,7 +8,8 @@ const zipCode = document.getElementById('zip')
 
 cardNumber.addEventListener('input', formatInput(cardNumber))
 expirationDate.addEventListener('input', formatInput(expirationDate))
-cvc.addEventListener("input", formatInput(cvc));
+cvc.addEventListener('input', formatInput(cvc))
+zipCode.addEventListener('input', formatInput(zipCode))
 
 function formatInput(element) {
 	switch (element.id) {
@@ -28,6 +29,11 @@ function formatInput(element) {
 		case 'cvc':
 			var maskOptions = {
 				mask: '0000',
+			}
+			break
+		case 'zip':
+			var maskOptions = {
+				mask: '00-000',
 			}
 			break
 	}
