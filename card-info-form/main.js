@@ -6,6 +6,16 @@ const cvc = document.getElementById('cvc')
 const nameOnCard = document.getElementById('name')
 const zipCode = document.getElementById('zip')
 
+cardNumber.addEventListener('input', formatInput(cardNumber))
+
+function formatInput(element) {
+	var maskOptions = {
+		mask: '0000 0000 0000 0000',
+	}
+
+	IMask(element, maskOptions)
+}
+
 checkoutForm.addEventListener('submit', (e) => {
 	e.preventDefault()
 	validateForm()
@@ -64,7 +74,7 @@ const validateEmail = (emailInput) => {
 	return pattern.test(emailInput)
 }
 
-let countries = [
+const countries = [
 	'Afghanistan',
 	'Albania',
 	'Algeria',
