@@ -9,8 +9,15 @@ const zipCode = document.getElementById('zip')
 cardNumber.addEventListener('input', formatInput(cardNumber))
 
 function formatInput(element) {
-	var maskOptions = {
-		mask: '0000 0000 0000 0000',
+	switch(element.id){
+    case 'card-number':
+      var maskOptions = {
+        // 0 - any number
+        // a - any letter
+        // * - any character
+        mask: '0000 0000 0000 0000'
+      };
+      break
 	}
 
 	IMask(element, maskOptions)
