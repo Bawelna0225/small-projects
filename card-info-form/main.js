@@ -7,7 +7,8 @@ const nameOnCard = document.getElementById('name')
 const zipCode = document.getElementById('zip')
 
 cardNumber.addEventListener('input', formatInput(cardNumber))
-expirationDate.addEventListener("input", formatInput(expirationDate));
+expirationDate.addEventListener('input', formatInput(expirationDate))
+cvc.addEventListener("input", formatInput(cvc));
 
 function formatInput(element) {
 	switch (element.id) {
@@ -22,6 +23,11 @@ function formatInput(element) {
 		case 'expiration-date':
 			var maskOptions = {
 				mask: '00/00',
+			}
+			break
+		case 'cvc':
+			var maskOptions = {
+				mask: '0000',
 			}
 			break
 	}
