@@ -105,15 +105,15 @@ function validateForm() {
 			checkoutForm.querySelector('button').classList.add('processing')
 			setTimeout(() => {
 				checkoutForm.querySelector('button').classList.remove('processing')
-				checkoutForm.querySelector('button').classList.add('success')
+				
 				setTimeout(() => {
-					checkoutForm.querySelector('button').classList.remove('success')
 					checkoutForm.reset()
 				}, 2500)
 			}, 1500)
 		}
 	}
 }
+
 
 const validateEmail = (emailInput) => {
 	let pattern = /\S+@\S+\.\S+/
