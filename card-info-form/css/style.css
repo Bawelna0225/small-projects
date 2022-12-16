@@ -131,6 +131,62 @@ a {
   text-align: center;
 }
 
+.copy-card-number-container {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.95);
+  color: white;
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+}
+.copy-card-number-container .correct-number,
+.copy-card-number-container .incorrect-number {
+  padding: 10px;
+  border-radius: 4px;
+  display: grid;
+  gap: 10px;
+}
+.copy-card-number-container .correct-number p,
+.copy-card-number-container .incorrect-number p {
+  color: #aaa;
+}
+.copy-card-number-container .correct-number input,
+.copy-card-number-container .incorrect-number input {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: white;
+  font-size: 1.2rem;
+}
+.copy-card-number-container .correct-number button,
+.copy-card-number-container .incorrect-number button {
+  padding: 8px;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  border: none;
+}
+.copy-card-number-container .correct-number {
+  background-color: rgba(15, 55, 5, 0.2);
+}
+.copy-card-number-container .correct-number p {
+  color: #2fc150;
+}
+.copy-card-number-container .correct-number button {
+  background-color: #1c3021;
+}
+.copy-card-number-container .incorrect-number {
+  background-color: rgba(69, 16, 16, 0.3333333333);
+}
+.copy-card-number-container .incorrect-number p {
+  color: #eb3333;
+}
+.copy-card-number-container .incorrect-number button {
+  background-color: #301c1c;
+}
+
 @-webkit-keyframes spin {
   to {
     rotate: 360deg;

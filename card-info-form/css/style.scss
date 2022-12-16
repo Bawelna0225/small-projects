@@ -132,6 +132,58 @@ a {
 		text-align: center;
 	}
 }
+.copy-card-number-container {
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	background-color: rgba(0, 0, 0, 0.95);
+	color: white;
+	display: flex;
+	gap: 10px;
+	padding: 10px;
+	.correct-number,
+	.incorrect-number {
+		padding: 10px;
+		border-radius: 4px;
+		display: grid;
+		gap: 10px;
+		p {
+			color: #aaa;
+		}
+		input {
+			background-color: transparent;
+			border: none;
+			outline: none;
+			color: white;
+			font-size: 1.2rem;
+		}
+		button {
+			padding: 8px;
+			border-radius: 4px;
+			color: white;
+			cursor: pointer;
+			border: none;
+		}
+	}
+	.correct-number {
+		background-color: rgba(15, 55, 5, 0.2);
+		p {
+			color: #2fc150;
+		}
+		button {
+			background-color: #1c3021;
+		}
+	}
+	.incorrect-number {
+		background-color: #45101055;
+		p {
+			color: #eb3333;
+		}
+		button {
+			background-color: #301c1c;
+		}
+	}
+}
 @keyframes spin {
 	to {
 		rotate: 360deg;
