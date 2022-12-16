@@ -105,7 +105,7 @@ function validateForm() {
 			checkoutForm.querySelector('button').classList.add('processing')
 			setTimeout(() => {
 				checkoutForm.querySelector('button').classList.remove('processing')
-				
+				document.querySelector('.payment-success-modal').classList.add('open')
 				setTimeout(() => {
 					checkoutForm.reset()
 				}, 2500)
@@ -113,7 +113,9 @@ function validateForm() {
 		}
 	}
 }
-
+document.querySelector('.payment-success-modal .content button').addEventListener('click', () => {
+	document.querySelector('.payment-success-modal').classList.remove('open')
+})
 
 const validateEmail = (emailInput) => {
 	let pattern = /\S+@\S+\.\S+/
