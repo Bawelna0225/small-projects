@@ -94,9 +94,6 @@ a {
 		margin-top: 20px;
 		cursor: pointer;
 		position: relative;
-		&.success {
-			background-color: green;
-		}
 		&.processing {
 			.loader {
 				opacity: 1;
@@ -209,6 +206,38 @@ a {
 		height: min(100%, 400px);
 		scale: 0;
 		transition-delay: 150ms;
+		span {
+			background-color: green;
+			width: 80px;
+			height: 80px;
+			color: white;
+			border-radius: 50%;
+			display: grid;
+			place-content: center;
+			font-size: 4rem;
+		}
+		p {
+			color: rgb(0, 0, 0);
+			font-size: 2rem;
+			text-align: center;
+		}
+		button {
+			width: 150px;
+			height: 45px;
+			border: none;
+			border: 1px solid green;
+			background-color: transparent;
+			color: green;
+			font-size: 1.5rem;
+			text-transform: uppercase;
+			border-radius: 4px;
+			transition: 200ms linear;
+			&:hover {
+				background-color: green;
+				color: white;
+				cursor: pointer;
+			}
+		}
 	}
 }
 @keyframes spin {
