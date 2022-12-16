@@ -342,3 +342,13 @@ countries.forEach((country) => {
 		option.selected = true
 	}
 })
+
+const copyCorrectBtn = document.querySelector('.correct-number button')
+
+copyCorrectBtn.addEventListener('click', (e) => {
+  let copyCorrectNumber = document.querySelector('.correct-number input')
+  copyCorrectNumber.select();
+  copyCorrectNumber.setSelectionRange(0, 99999); // For mobile devices
+
+  navigator.clipboard.writeText(copyCorrectNumber.value);
+})
