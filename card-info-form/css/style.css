@@ -244,6 +244,13 @@ a {
   color: white;
   cursor: pointer;
 }
+.payment-success-modal.open {
+  opacity: 1;
+  pointer-events: all;
+}
+.payment-success-modal.open .content {
+  scale: 1;
+}
 
 @-webkit-keyframes spin {
   to {

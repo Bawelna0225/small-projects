@@ -239,6 +239,13 @@ a {
 			}
 		}
 	}
+	&.open {
+		opacity: 1;
+		pointer-events: all;
+		.content {
+			scale: 1;
+		}
+	}
 }
 @keyframes spin {
 	to {
