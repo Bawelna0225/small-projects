@@ -23,7 +23,18 @@ function formatInput(element) {
 			break
 		case 'expiration-date':
 			var maskOptions = {
-				mask: '00/00',
+				mask: 'MM/YY',
+				blocks: {
+					YY: {
+						mask: '00',
+					},
+
+					MM: {
+						mask: IMask.MaskedRange,
+						from: 1,
+						to: 12,
+					},
+				},
 			}
 			break
 		case 'cvc':
@@ -48,11 +59,11 @@ checkoutForm.addEventListener('submit', (e) => {
 
 function validateForm() {
 	let errorFlag = false
-	if (cardNumber.value.length < 1 || cardNumber.value.split(' ').join('') == '') {
+	if (cardNumber.value.length < 19 || cardNumber.value.split(' ').join('') == '') {
 		cardNumber.classList.add('error')
 		errorFlag = true
 	}
-	if (expirationDate.value.length < 1 || expirationDate.value.split(' ').join('') == '') {
+	if (expirationDate.value.length < 5 || expirationDate.value.split(' ').join('') == '') {
 		expirationDate.classList.add('error')
 		errorFlag = true
 	}
@@ -60,7 +71,7 @@ function validateForm() {
 		emailInput.classList.add('error')
 		errorFlag = true
 	}
-	if (cvc.value.length < 1 || cvc.value.split(' ').join('') == '') {
+	if (cvc.value.length < 4 || cvc.value.split(' ').join('') == '') {
 		cvc.classList.add('error')
 		errorFlag = true
 	}
@@ -96,6 +107,7 @@ function validateForm() {
 		if (cardNumber.value !== '4234 4234 1222 0000') {
 			checkoutForm.querySelector('button').classList.remove('fail')
 			checkoutForm.querySelector('button').classList.add('processing')
+
 			setTimeout(() => {
 				checkoutForm.querySelector('button').classList.remove('processing')
 				cardNumber.classList.add('error')
@@ -348,9 +360,9 @@ countries.forEach((country) => {
 const copyCorrectBtn = document.querySelector('.correct-number button')
 
 copyCorrectBtn.addEventListener('click', (e) => {
-  let copyCorrectNumber = document.querySelector('.correct-number input')
-  copyCorrectNumber.select();
-  copyCorrectNumber.setSelectionRange(0, 99999); // For mobile devices
+	let copyCorrectNumber = document.querySelector('.correct-number input')
+	copyCorrectNumber.select()
+	copyCorrectNumber.setSelectionRange(0, 99999) // For mobile devices
 
-  navigator.clipboard.writeText(copyCorrectNumber.value);
+	navigator.clipboard.writeText(copyCorrectNumber.value)
 })
