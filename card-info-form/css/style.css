@@ -139,6 +139,9 @@ a {
   padding: 10px;
   translate: 0% 70%;
 }
+.copy-card-number-container.open {
+  translate: 0% 0%;
+}
 .copy-card-number-container span {
   position: absolute;
   top: -18%;

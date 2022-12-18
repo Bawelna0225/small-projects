@@ -366,3 +366,12 @@ copyCorrectBtn.addEventListener('click', (e) => {
 
 	navigator.clipboard.writeText(copyCorrectNumber.value)
 })
+
+document.querySelector('.copy-card-number-container span').addEventListener('click', () => {
+	document.querySelector('.copy-card-number-container').classList.toggle('open')
+	if (document.querySelector('.copy-card-number-container').classList.contains('open')) {
+		document.querySelector('.copy-card-number-container span').textContent = 'expand_more'
+	} else {
+		document.querySelector('.copy-card-number-container span').textContent = 'expand_less'
+	}
+})
