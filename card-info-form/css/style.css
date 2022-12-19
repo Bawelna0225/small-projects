@@ -27,6 +27,7 @@ a {
   width: min(100vw - 1rem, 400px);
   gap: 20px;
   border-radius: 4px;
+  margin-block: 40px;
 }
 .checkout .input {
   display: grid;
@@ -156,9 +157,9 @@ a {
 }
 .copy-card-number-container span {
   position: absolute;
-  top: -18%;
-  background-color: rgba(0, 0, 0, 0.95);
-  left: 0;
+  top: -15%;
+  background-color: rgb(16, 16, 16);
+  right: 0;
   font-size: 1.5rem;
   cursor: pointer;
 }
