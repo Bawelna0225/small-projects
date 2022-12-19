@@ -57,6 +57,18 @@ a {
 				border-bottom: 0px;
 				border-radius: 6px 6px 0px 0px;
 			}
+			.credit-card-icons {
+				display: flex;
+				position: absolute;
+				right: 5px;
+				top: 28px;
+				height: 20px;
+				pointer-events: none;
+				svg {
+					width: 35px;
+					height: 20px;
+				}
+			}
 		}
 		.card-details {
 			display: flex;
@@ -129,6 +141,7 @@ a {
 		text-align: center;
 	}
 }
+
 .copy-card-number-container {
 	position: fixed;
 	bottom: 0;

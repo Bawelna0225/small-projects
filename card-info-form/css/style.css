@@ -61,6 +61,18 @@ a {
   border-bottom: 0px;
   border-radius: 6px 6px 0px 0px;
 }
+.checkout .card-info .card-number .credit-card-icons {
+  display: flex;
+  position: absolute;
+  right: 5px;
+  top: 28px;
+  height: 20px;
+  pointer-events: none;
+}
+.checkout .card-info .card-number .credit-card-icons svg {
+  width: 35px;
+  height: 20px;
+}
 .checkout .card-info .card-details {
   display: flex;
 }
