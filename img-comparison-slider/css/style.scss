@@ -27,6 +27,14 @@ body {
 			background-image: url('https://picsum.photos/750/500');
 			background-repeat: no-repeat;
 		}
+		.img-2 {
+			height: 100%;
+			width: 50%;
+            position: absolute;
+			background-image: url('https://picsum.photos/750/500');
+            filter: sepia(1);
+			background-repeat: no-repeat;
+		}
 	}
 	.slider {
 		position: absolute;
@@ -38,6 +46,7 @@ body {
 			height: 486px;
 			position: absolute;
 			left: 49.85%;
+			pointer-events: none;
 			span {
 				height: 42px;
 				width: 42px;
@@ -56,7 +65,7 @@ body {
 					border-bottom-width: 0px;
 					border-right-width: 0px;
 					translate: -50% -50%;
-                    rotate: 45deg;
+					rotate: 45deg;
 				}
 				&::before {
 					left: 40%;

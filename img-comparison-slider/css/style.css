@@ -31,6 +31,14 @@ body {
   background-image: url("https://picsum.photos/750/500");
   background-repeat: no-repeat;
 }
+.container .images .img-2 {
+  height: 100%;
+  width: 50%;
+  position: absolute;
+  background-image: url("https://picsum.photos/750/500");
+  filter: sepia(1);
+  background-repeat: no-repeat;
+}
 .container .slider {
   position: absolute;
   top: 0;
@@ -42,6 +50,7 @@ body {
   height: 486px;
   position: absolute;
   left: 49.85%;
+  pointer-events: none;
 }
 .container .slider .drag-line span {
   height: 42px;
