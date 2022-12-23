@@ -28,4 +28,29 @@ body {
 }
 .container .wrapper {
   margin: 1.25rem 1.75rem;
+}
+.container .wrapper .input-box {
+  position: relative;
+}
+.container .wrapper .input-box input {
+  width: 100%;
+  height: 53px;
+  color: #000;
+  background: none;
+  font-size: 1.06rem;
+  font-weight: 500;
+  border-radius: 4px;
+  letter-spacing: 1.4px;
+  border: 1px solid #aaa;
+  padding: 0 2.85rem 0 1rem;
+}
+.container .wrapper .input-box span {
+  position: absolute;
+  right: 13px;
+  cursor: pointer;
+  line-height: 53px;
+  color: #707070;
+}
+.container .wrapper .input-box span:hover {
+  color: #4285f4 !important;
 }/*# sourceMappingURL=style.css.map */
