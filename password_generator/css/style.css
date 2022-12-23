@@ -53,4 +53,32 @@ body {
 }
 .container .wrapper .input-box span:hover {
   color: #4285f4 !important;
+}
+.container .wrapper .pass-indicator {
+  width: 100%;
+  height: 4px;
+  position: relative;
+  background: #dfdfdf;
+  margin-top: 0.75rem;
+  border-radius: 25px;
+}
+.container .wrapper .pass-indicator::before {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 50%;
+  border-radius: inherit;
+  transition: width 0.3s ease;
+}
+.container .wrapper .pass-indicator#weak::before {
+  width: 20%;
+  background: #e64a4a;
+}
+.container .wrapper .pass-indicator#medium::before {
+  width: 50%;
+  background: #f1c80b;
+}
+.container .wrapper .pass-indicator#strong::before {
+  width: 100%;
+  background: #4285f4;
 }/*# sourceMappingURL=style.css.map */

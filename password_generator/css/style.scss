@@ -50,5 +50,33 @@ body {
 				}
 			}
 		}
+		.pass-indicator {
+			width: 100%;
+			height: 4px;
+			position: relative;
+			background: #dfdfdf;
+			margin-top: 0.75rem;
+			border-radius: 25px;
+			&::before {
+				position: absolute;
+				content: '';
+				height: 100%;
+				width: 50%;
+				border-radius: inherit;
+				transition: width 0.3s ease;
+			}
+			&#weak::before {
+				width: 20%;
+				background: #e64a4a;
+			}
+			&#medium::before {
+				width: 50%;
+				background: #f1c80b;
+			}
+			&#strong::before {
+				width: 100%;
+				background: #4285f4;
+			}
+		}
 	}
 }
