@@ -12,3 +12,12 @@ const characters = { // object of letters, numbers & symbols
     symbols: "^!$%&|[](){}:;.,*+-#@<>~"
 }
 
+const generatePassword = () => {
+    let staticPassword = "",
+    randomPassword = "",
+    excludeDuplicate = false,
+    passLength = lengthSlider.value;
+
+
+}
+
