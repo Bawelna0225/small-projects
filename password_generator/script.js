@@ -52,5 +52,20 @@ const updatePassIndicator = () => {
     passIndicator.id = lengthSlider.value <= 8 ? "weak" : lengthSlider.value <= 16 ? "medium" : "strong";
 }
 
-generatePassword()
-updatePassIndicator()
+const updateSlider = () => {
+    // passing slider value as counter text
+    document.querySelector(".pass-length span").innerText = lengthSlider.value;
+    generatePassword();
+    updatePassIndicator();
+}
+updateSlider();
+
+const copyPassword = () => {
+    navigator.clipboard.writeText(passwordInput.value); // copying random password
+    copyIcon.innerText = "check"; // changing copy icon to tick
+    copyIcon.style.color = "#4285F4";
+    setTimeout(() => { // after 1500 ms, changing tick icon back to copy
+        copyIcon.innerText = "copy_all";
+        copyIcon.style.color = "#707070";
+    }, 1500);
+}
