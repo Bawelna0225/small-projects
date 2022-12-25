@@ -45,3 +45,12 @@ const generatePassword = () => {
     }
     passwordInput.value = randomPassword; // passing randomPassword to passwordInput value
 }
+
+const updatePassIndicator = () => {
+    // if lengthSlider value is less than 8 then pass "weak" as passIndicator id else if lengthSlider 
+    // value is less than 16 then pass "medium" as id else pass "strong" as id
+    passIndicator.id = lengthSlider.value <= 8 ? "weak" : lengthSlider.value <= 16 ? "medium" : "strong";
+}
+
+generatePassword()
+updatePassIndicator()
