@@ -4,4 +4,72 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #2f2d2d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.notifications {
+  position: fixed;
+  top: 30px;
+  right: 20px;
+}
+.notifications :where(.toast, .column) {
+  display: flex;
+  align-items: center;
+}
+.notifications .toast {
+  width: 400px;
+  list-style-type: none;
+  border-radius: 4px;
+  padding: 16px 17px;
+  margin-bottom: 10px;
+  background-color: #fff;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+}
+.notifications .toast.success {
+  --accent-color: rgb(15, 199, 15);
+}
+.notifications .toast.warning {
+  --accent-color: rgb(249, 183, 18);
+}
+.notifications .toast.error {
+  --accent-color: rgb(199, 15, 15);
+}
+.notifications .toast.info {
+  --accent-color: rgb(15, 119, 199);
+}
+.notifications .toast::before {
+  position: absolute;
+  content: "";
+  height: 3px;
+  width: 50%;
+  bottom: 0;
+  left: 0;
+  background-color: var(--accent-color);
+}
+.notifications .toast .column span:first-of-type {
+  font-size: 1.75rem;
+  color: var(--accent-color);
+}
+.notifications .toast .column span:last-of-type {
+  font-size: 1.07rem;
+  margin-left: 12px;
+}
+.notifications .toast button {
+  display: grid;
+  place-content: center;
+  background: none;
+  border: none;
+}
+.notifications .toast button:hover {
+  color: #726f6f;
+  cursor: pointer;
 }/*# sourceMappingURL=style.css.map */
