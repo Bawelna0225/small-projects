@@ -1,14 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <script src="./main.js" defer></script>
-    <title>Document</title>
-</head>
-<body>
-    <!-- Too unmotivated to do anything today lol-->
-</body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+		<link rel="stylesheet" href="css/style.css" />
+		<script src="./main.js" defer></script>
+		<title>Document</title>
+	</head>
+	<body>
+		<ul class="notifications">
+			<li class="toast success">
+				<div class="column">
+					<span class="material-symbols-outlined"> check_circle </span>
+					<span>Success: success toast</span>
+				</div>
+				<button>
+					<span class="material-symbols-outlined"> close </span>
+				</button>
+			</li>
+
+			<li class="toast warning">
+				<div class="column">
+					<span class="material-symbols-outlined"> warning </span>
+					<span>Warning: warning toast</span>
+				</div>
+				<button>
+					<span class="material-symbols-outlined"> close </span>
+				</button>
+			</li>
+
+			<li class="toast error">
+				<div class="column">
+					<span class="material-symbols-outlined"> error </span>
+					<span>Error: error toast</span>
+				</div>
+				<button>
+					<span class="material-symbols-outlined"> close </span>
+				</button>
+			</li>
+
+			<li class="toast info">
+				<div class="column">
+					<span class="material-symbols-outlined"> info </span>
+					<span>Info: info toast</span>
+				</div>
+				<button>
+					<span class="material-symbols-outlined"> close </span>
+				</button>
+			</li>
+		</ul>
+		<div class="container">
+            <button>Success</button>
+            <button>Warning</button>
+            <button>Error</button>
+            <button>Info</button>
+        </div>
+	</body>
 </html>
