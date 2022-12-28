@@ -175,4 +175,10 @@ body {
   100% {
     width: 0%;
   }
+}
+@media (width < 500px) {
+  .toast {
+    max-width: calc(100vw - 2rem);
+    left: 1rem;
+  }
 }/*# sourceMappingURL=style.css.map */
