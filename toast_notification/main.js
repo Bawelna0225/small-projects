@@ -23,7 +23,19 @@ const toastDetails = {
 
 
 const createToast = (id) => {
+	const { icon, text } = toastDetails[id]
+	const toast = document.createElement('li')
+	toast.className = `toast ${id}`
+	toast.innerHTML = `				
+                <div class="column">
+					<span class="material-symbols-outlined"> ${icon} </span>
+					<span>${text}</span>
+				</div>
+				<button>
+					<span class="material-symbols-outlined"> close </span>
+				</button>`
 
+	notifications.appendChild(toast)
 }
 
 buttons.forEach((button) => {
