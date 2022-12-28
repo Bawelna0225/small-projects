@@ -73,6 +73,9 @@ body {
 				cursor: pointer;
 			}
 		}
+		&.hide {
+			animation: 300ms hide_toast linear forwards;
+		}
 	}
 }
 .buttons {
@@ -113,6 +116,20 @@ body {
 	}
 	100% {
 		transform: translate(-10px);
+	}
+}
+@keyframes hide_toast {
+	0% {
+		transform: translate(-10px);
+	}
+	40% {
+		transform: translate(0%);
+	}
+	80% {
+		transform: translate(-5%);
+	}
+	100% {
+		transform: translate(calc(100% + 20px));
 	}
 }
 @keyframes progress {

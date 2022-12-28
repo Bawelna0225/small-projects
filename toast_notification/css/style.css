@@ -77,6 +77,10 @@ body {
   color: #726f6f;
   cursor: pointer;
 }
+.notifications .toast.hide {
+  -webkit-animation: 300ms hide_toast linear forwards;
+          animation: 300ms hide_toast linear forwards;
+}
 
 .buttons {
   display: flex;
@@ -132,6 +136,34 @@ body {
   }
   100% {
     transform: translate(-10px);
+  }
+}
+@-webkit-keyframes hide_toast {
+  0% {
+    transform: translate(-10px);
+  }
+  40% {
+    transform: translate(0%);
+  }
+  80% {
+    transform: translate(-5%);
+  }
+  100% {
+    transform: translate(calc(100% + 20px));
+  }
+}
+@keyframes hide_toast {
+  0% {
+    transform: translate(-10px);
+  }
+  40% {
+    transform: translate(0%);
+  }
+  80% {
+    transform: translate(-5%);
+  }
+  100% {
+    transform: translate(calc(100% + 20px));
   }
 }
 @-webkit-keyframes progress {
