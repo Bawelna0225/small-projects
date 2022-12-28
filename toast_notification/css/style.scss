@@ -29,7 +29,7 @@ body {
 		background-color: #fff;
 		justify-content: space-between;
 		position: relative;
-        overflow: hidden;
+		overflow: hidden;
 		&.success {
 			--accent-color: rgb(15, 199, 15);
 		}
@@ -70,6 +70,32 @@ body {
 				color: #726f6f;
 				cursor: pointer;
 			}
+		}
+	}
+}
+.buttons {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+	button {
+		padding: 10px 12px;
+		border-radius: 4px;
+		color: white;
+		border: none;
+		font-size: 1.1rem;
+		cursor: pointer;
+		background-color: var(--accent-color);
+		&#success {
+			--accent-color: rgb(15, 199, 15);
+		}
+		&#warning {
+			--accent-color: rgb(249, 183, 18);
+		}
+		&#error {
+			--accent-color: rgb(199, 15, 15);
+		}
+		&#info {
+			--accent-color: rgb(15, 119, 199);
 		}
 	}
 }
