@@ -20,7 +20,13 @@ const toastDetails = {
 		text: 'Info: info toast',
 	},
 }
-
+const removeToast = (toast) => {
+	toast.classList.add('hide')
+	if (toast.timeoutId) clearTimeout(toast.timeoutId)
+	setTimeout(() => {
+		toast.remove()
+	}, 500)
+}
 
 const createToast = (id) => {
 	const { icon, text } = toastDetails[id]
@@ -31,11 +37,15 @@ const createToast = (id) => {
 					<span class="material-symbols-outlined"> ${icon} </span>
 					<span>${text}</span>
 				</div>
-				<button>
+				<button onclick="removeToast(this.parentElement)">
 					<span class="material-symbols-outlined"> close </span>
 				</button>`
 
 	notifications.appendChild(toast)
+
+	toast.timeoutId = setTimeout(() => {
+		removeToast(toast)
+	}, 5000)
 }
 
 buttons.forEach((button) => {
