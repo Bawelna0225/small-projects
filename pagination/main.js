@@ -61,6 +61,7 @@ firstPageButton.onclick = () => {
 	document.querySelector('button.active').classList.remove('active')
 	document.querySelectorAll('.pagination-numbers button')[0].classList.add('active')
 	checkIfFirstPage()
+	checkIfLastPage()
 }
 
 lastPageButton.onclick = () => {
@@ -68,6 +69,7 @@ lastPageButton.onclick = () => {
 	current_page = page_count
 	document.querySelector('button.active').classList.remove('active')
 	document.querySelector('.pagination-numbers').lastElementChild.classList.add('active')
+	checkIfFirstPage()
 	checkIfLastPage()
 }
 
@@ -78,6 +80,7 @@ prevPageButton.onclick = () => {
 	document.querySelector('button.active').classList.remove('active')
 	prevActive.classList.add('active')
 	checkIfFirstPage()
+	checkIfLastPage()
 }
 
 nextPageButton.onclick = () => {
@@ -86,6 +89,7 @@ nextPageButton.onclick = () => {
 	let nextActive = document.querySelector('button.active').nextElementSibling
 	document.querySelector('button.active').classList.remove('active')
 	nextActive.classList.add('active')
+	checkIfFirstPage()
 	checkIfLastPage()
 }
 

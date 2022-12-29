@@ -12,6 +12,9 @@ body {
 	display: grid;
 	place-content: center;
 }
+button:disabled {
+	cursor: auto !important;
+}
 main {
 	display: grid;
 	place-content: center;
