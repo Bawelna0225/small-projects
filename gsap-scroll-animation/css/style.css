@@ -21,9 +21,21 @@ section {
   gap: 2rem;
 }
 
+.gallery {
+  background: rgb(236, 236, 236);
+}
+
 .work {
   width: min(100vw - 2rem, 1200px);
   margin: 0 auto;
   display: flex;
   gap: 1rem;
+}
+.work .card {
+  background-color: white;
+  border-radius: 0.3rem;
+  padding: 1rem;
+}
+.work .card .content p {
+  margin: 1rem 0 0;
 }/*# sourceMappingURL=style.css.map */
