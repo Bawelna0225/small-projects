@@ -6,8 +6,17 @@
   font-family: "Poppins", sans-serif;
 }
 
+:root {
+  --bg-primary: #fff;
+  --bg-secondary: #ededed;
+  --card-color: #fff;
+  --text-color: #000;
+}
+
 body {
   height: 100vh;
+  color: var(--text-color);
+  background-color: var(--bg-primary);
 }
 
 h1 {
@@ -22,7 +31,7 @@ section {
 }
 
 .gallery {
-  background: rgb(236, 236, 236);
+  background-color: var(--bg-secondary);
 }
 
 .work {
@@ -32,7 +41,7 @@ section {
   gap: 1rem;
 }
 .work .card {
-  background-color: white;
+  background-color: var(--card-color);
   border-radius: 0.3rem;
   padding: 1rem;
 }
@@ -61,4 +70,13 @@ section {
 .work .card:nth-of-type(3) .img-container .img {
   background-image: url("https://picsum.photos/400");
   background-position: 50%;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-primary: #222;
+    --bg-secondary: #2e2e2e;
+    --card-color: #222;
+    --text-color: #fff;
+  }
 }/*# sourceMappingURL=style.css.map */
