@@ -86,5 +86,19 @@ h1 {
 			position: absolute;
 			z-index: 2;
 		}
+		&.day-of-week {
+			border: none !important;
+			background: none !important;
+			background-color: transparent !important;
+			pointer-events: none;
+			&::before,
+			&::after {
+				display: none;
+			}
+			.date__content {
+				border: none !important;
+				background: none !important;
+			}
+		}
 	}
 }
