@@ -102,4 +102,9 @@ h1 {
 .dates-container .date.day-of-week .date__content {
   border: none !important;
   background: none !important;
+}
+.dates-container .date.active {
+  border: 2px solid rgb(84, 84, 84);
+  background-color: rgb(90, 90, 90) !important;
+  color: var(--current-day-text);
 }/*# sourceMappingURL=style.css.map */
