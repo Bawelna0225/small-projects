@@ -5,3 +5,41 @@
 	box-sizing: border-box;
 	font-family: 'Poppins', sans-serif;
 }
+:root {
+	--bg-color: rgb(20, 20, 20);
+	--card-color: rgb(23, 23, 23);
+	--card-border-color: rgba(255, 255, 255, 0.1);
+	--light-color: rgba(255, 255, 255, 0.06);
+	--hover-border-color: rgba(255, 255, 255, 0.4);
+	--text-color: #bbb;
+	--current-day-text: #fff;
+}
+
+body {
+	align-items: center;
+	background-color: var(--bg-color);
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+    width: 100%;
+	justify-content: center;
+	margin: 0px;
+	overflow: hidden;
+	padding: 0px;
+	color: var(--text-color);
+}
+h1 {
+	margin-bottom: 40px;
+}
+.dates-container {
+	width: 100%;
+	max-width: 400px;
+	margin: 0 auto;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 7px;
+	align-items: center;
+	&:hover > .card::after {
+		opacity: 1;
+	}
+}
