@@ -76,4 +76,17 @@ h1 {
 .dates-container .date::after {
   background: radial-gradient(200px circle at var(--mouse-x) var(--mouse-y), var(--hover-border-color), transparent 40%);
   z-index: 1;
+}
+.dates-container .date__content {
+  background-color: var(--card-color);
+  border-radius: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-grow: 1;
+  inset: 1px;
+  padding: 10px;
+  position: absolute;
+  z-index: 2;
 }/*# sourceMappingURL=style.css.map */

@@ -73,6 +73,18 @@ h1 {
 			background: radial-gradient(200px circle at var(--mouse-x) var(--mouse-y), var(--hover-border-color), transparent 40%);
 			z-index: 1;
 		}
-
+		&__content {
+			background-color: var(--card-color);
+			border-radius: inherit;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			flex-grow: 1;
+			inset: 1px;
+			padding: 10px;
+			position: absolute;
+			z-index: 2;
+		}
 	}
 }
