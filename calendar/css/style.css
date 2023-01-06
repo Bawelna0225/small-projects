@@ -45,4 +45,35 @@ h1 {
 }
 .dates-container:hover > .card::after {
   opacity: 1;
+}
+.dates-container .date {
+  background-color: var(--card-border-color);
+  place-self: center;
+  display: flex;
+  height: 50px;
+  flex-direction: column;
+  position: relative;
+  width: min(100%, 50px);
+}
+.dates-container .date:hover::before {
+  opacity: 1;
+}
+.dates-container .date::before, .dates-container .date::after {
+  border-radius: inherit;
+  content: "";
+  height: 100%;
+  left: 0px;
+  opacity: 0;
+  position: absolute;
+  top: 0px;
+  transition: opacity 500ms;
+  width: 100%;
+}
+.dates-container .date::before {
+  background: radial-gradient(150px circle at var(--mouse-x) var(--mouse-y), var(--light-color), transparent 40%);
+  z-index: 3;
+}
+.dates-container .date::after {
+  background: radial-gradient(200px circle at var(--mouse-x) var(--mouse-y), var(--hover-border-color), transparent 40%);
+  z-index: 1;
 }/*# sourceMappingURL=style.css.map */
