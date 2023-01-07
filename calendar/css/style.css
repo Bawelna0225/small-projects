@@ -43,7 +43,7 @@ h1 {
   gap: 7px;
   align-items: center;
 }
-.dates-container:hover > .card::after {
+.dates-container:hover > .date::after {
   opacity: 1;
 }
 .dates-container .date {
