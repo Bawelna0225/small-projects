@@ -18,8 +18,17 @@
         <button type="submit" name='submit'>Submit</button>
     </form>
     <h3>Comments</h3>
-    <?php 
-    
+        <?php 
+        $select_comments_query = "SELECT * FROM comments ORDER BY date_created desc";
+        $fetch_comments = mysqli_query($connection, $select_comments_query);
+        while ($row = mysqli_fetch_assoc($fetch_comments))
+        {
+            echo "<div class='comment'>";
+                echo "<h4>".$row['user_id']."</h4>";
+                echo "<small>".$row['date_created']."</small>";
+                echo "<p>".$row['content']."</p>";
+            echo "</div>";
+        }
     ?>
 </body>
 </html>
