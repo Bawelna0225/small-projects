@@ -18,5 +18,8 @@
         <button type="submit" name='submit'>Submit</button>
     </form>
     <h3>Comments</h3>
+    <?php 
+    
+    ?>
 </body>
 </html>
