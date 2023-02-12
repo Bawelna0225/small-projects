@@ -1,4 +1,4 @@
-<?php 
+hp 
     require_once "controller.php";
 ?>
 <!DOCTYPE html>
