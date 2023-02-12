@@ -2,4 +2,25 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+.container {
+  width: min(100vw - 2rem, 1200px);
+  width: min(100cvw - 2rem, 1200px);
+  outline: 1px solid red;
+  margin: 0 auto;
+  margin-block: 20px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+form {
+  width: 90%;
+}
+form textarea {
+  width: 100%;
 }/*# sourceMappingURL=style.css.map */
