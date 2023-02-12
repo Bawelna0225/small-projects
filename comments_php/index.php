@@ -27,6 +27,12 @@
                 echo "<h4>".$row['user_id']."</h4>";
                 echo "<small>".$row['date_created']."</small>";
                 echo "<p>".$row['content']."</p>";
+                echo "<div class='replies'>";
+                    echo "<div class='reply'>reply 1</div>";
+                    echo "<div class='reply'>reply 2</div>";
+                    echo "<div class='reply'>reply 3</div>";
+                    echo "<div class='reply'>reply 4</div>";
+                echo"</div>";
             echo "</div>";
         }
     ?>
