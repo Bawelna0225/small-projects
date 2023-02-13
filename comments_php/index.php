@@ -1,4 +1,4 @@
-hp 
+<?php 
     require_once "controller.php";
 ?>
 <!DOCTYPE html>
@@ -29,8 +29,8 @@ hp
                 while ($row = mysqli_fetch_assoc($fetch_comments))
                 {
                     echo "<div class='user-comment'>";
-                        echo "<h4>".$row['user_id']."</h4>";
                         echo "<small>".$row['date_created']."</small>";
+                        echo "<h4>".$row['user_id']."</h4>";
                         echo "<p>".$row['content']."</p>";
                         echo "<div class='replies'>";
                             echo "<div class='reply'>reply 1</div>";
