@@ -8,6 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <script src="./script.js" defer></script>
     <title>Comments</title>
 </head>
 <body>
@@ -32,11 +33,15 @@
                         echo "<small>".$row['date_created']."</small>";
                         echo "<h4>".$row['user_id']."</h4>";
                         echo "<p>".$row['content']."</p>";
+                        echo "<button class='reply' data-comment-id='".$row['comment_id']."'>reply 1</button>";
+                        echo "<form id='form-id-".$row['comment_id']."' class='hidden' action='index.php' method='get'>
+                            <textarea name='comment' required placeholder='Your Comment'></textarea>
+                            <div class='buttons'>
+                                <button type='reset' class='cancel-reply' data-cancel-id='".$row['comment_id']."'>Cancel</button>
+                                <button type='submit' value='".$row['comment_id']."' name='reply' >Submit</button>
+                            </div>
+                        </form>";
                         echo "<div class='replies'>";
-                            echo "<div class='reply'>reply 1</div>";
-                            echo "<div class='reply'>reply 2</div>";
-                            echo "<div class='reply'>reply 3</div>";
-                            echo "<div class='reply'>reply 4</div>";
                         echo"</div>";
                     echo "</div>";
                 }
