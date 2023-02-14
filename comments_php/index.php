@@ -25,7 +25,7 @@
             <h3>Comments</h3>
             <div class="comments">
              <?php 
-                $select_comments_query = "SELECT * FROM comments ORDER BY date_created desc";
+                $select_comments_query = "SELECT * FROM comments WHERE parent_comment_id IS NULL ORDER BY date_created desc";
                 $fetch_comments = mysqli_query($connection, $select_comments_query);
                 while ($row = mysqli_fetch_assoc($fetch_comments))
                 {
@@ -42,6 +42,13 @@
                             </div>
                         </form>";
                         echo "<div class='replies'>";
+                        $select_replies_query = "SELECT * FROM comments WHERE parent_comment_id='".$row['comment_id']."' ORDER BY date_created desc";
+                        $fetch_replies = mysqli_query($connection, $select_replies_query);
+                        while ($reply = mysqli_fetch_assoc($fetch_replies))
+                        {
+                        echo "<p>".$reply['parent_comment_id']."</p>";
+                        echo "<p>".$reply['content']."</p>";
+                        }
                         echo"</div>";
                     echo "</div>";
                 }
