@@ -33,7 +33,7 @@
                         echo "<small>".$row['date_created']."</small>";
                         echo "<h4>".$row['user_id']."</h4>";
                         echo "<p>".$row['content']."</p>";
-                        echo "<button class='reply' data-comment-id='".$row['comment_id']."'>reply 1</button>";
+                        echo "<button class='reply' data-comment-id='".$row['comment_id']."'>reply</button>";
                         echo "<form id='form-id-".$row['comment_id']."' class='hidden' action='index.php' method='get'>
                             <textarea name='comment' required placeholder='Your Comment'></textarea>
                             <div class='buttons'>
