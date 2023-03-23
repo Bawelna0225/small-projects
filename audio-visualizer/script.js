@@ -27,5 +27,26 @@ file.addEventListener('change', function () {
 	let barHeight
 	let x
 
+	function animate() {
+		ctx.clearRect(0, 0, canvas.width, canvas.height)
+		x = 0
+		analyser.getByteFrequencyData(dataArray)
+
+		for (let i = 0; i < bufferLength; i++) {
+			barHeight = dataArray[i] * 1.5
+
+			const red = 250 * (i / bufferLength)
+			const green = 200
+			const blue = barHeight + 1.2 * (i / bufferLength)
+
+			ctx.fillStyle = 'rgb(' + red + ',' + green + ',' + blue + ')'
+			ctx.fillRect(x, canvas.height - barHeight, barWidth, barHeight)
+
+			x += barWidth + 1
+		}
+		requestAnimationFrame(animate)
+	}
+
+	animate()
 })
 
