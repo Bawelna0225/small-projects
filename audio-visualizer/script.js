@@ -14,5 +14,18 @@ file.addEventListener('change', function () {
 	audio1.load()
 	audio1.play()
 
+	const audioContext = new AudioContext()
+	audioSource = audioContext.createMediaElementSource(audio1)
+	analyser = audioContext.createAnalyser()
+	audioSource.connect(analyser)
+	analyser.connect(audioContext.destination)
+	analyser.fftSize = 512
+	const bufferLength = analyser.frequencyBinCount
+	const dataArray = new Uint8Array(bufferLength)
+
+	const barWidth = 15
+	let barHeight
+	let x
+
 })
 
