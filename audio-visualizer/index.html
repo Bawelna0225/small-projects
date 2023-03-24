@@ -10,9 +10,12 @@
 	</head>
 	<body>
 		<div id="container">
-			<canvas id="canvas1"></canvas>
+			<div class="filedrop">
+				<input type="file" id="fileupload" accept="audio/*" style="z-index: 100" />
+				<span>Drop your music file, or click & search</span>
+			</div>
 			<audio id="audio1" controls></audio>
-			<input type="file" id="fileupload" accept="audio/*" style="z-index: 100;"/>
+			<canvas id="canvas1"></canvas>
 		</div>
 	</body>
 </html>

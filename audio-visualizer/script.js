@@ -23,7 +23,7 @@ file.addEventListener('change', function () {
 	const bufferLength = analyser.frequencyBinCount
 	const dataArray = new Uint8Array(bufferLength)
 
-	const barWidth = 15
+	const barWidth = 18
 	let barHeight
 	let x
 
@@ -36,8 +36,8 @@ file.addEventListener('change', function () {
 			barHeight = dataArray[i] * 1.5
 
 			const red = 250 * (i / bufferLength)
-			const green = 200
-			const blue = barHeight + 1.2 * (i / bufferLength)
+			const green = 00
+			const blue = barHeight + 0.2 * (i / bufferLength)
 
 			ctx.fillStyle = 'rgb(' + red + ',' + green + ',' + blue + ')'
 			ctx.fillRect(x, canvas.height - barHeight, barWidth, barHeight)
